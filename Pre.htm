@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order Flower Delivery Online Sample</title>
+        <style>
+            html{
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            
+            body{
+                margin: 0;
+            }
+
+            .header{
+                background-color: yellowgreen;
+            }
+
+
+            /* Start header section  */
+            .titlebars{
+                width: 80%;
+                font-size: 16px;
+
+                display: flex;
+                align-items: center;
+
+                margin: auto;
+            }
+
+            .titlebar1{
+                font-size: 16px;
+                padding: 10px;
+                margin: 8px;
+            }
+
+            p{
+                padding: 2px;
+                margin: 5px;
+            }
+            /* End header section  */
+
+
+            /* start navbar  */
+            .navbar{
+                width: 80%;
+                font-size: 40px;
+                font-weight: 800;
+
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                margin: auto;
+                padding: 30px;
+                cursor: pointer;
+            }
+            
+            .logo span img{
+                width: 200px;
+                height: 40px;
+            }
+
+            .navbar .logo, .navbar .right-menu{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin-right: 50px;
+            }
+
+            .navbar .logo .logo-image{
+                width: 25px;
+                margin-right: 5px;
+            }
+
+            .dropdown-menu-items{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .dropdown .dropdown-menu .dropdown-items{
+                display: none;
+            }
+
+            .dropdown-menu .nav-link{
+                font-size: 20px;
+                color: gray;
+                text-decoration: none;
+            }
+
+            .icons{
+                display: flex; 
+                align-items: center;
+                flex-direction: row;
+
+                gap: 20px;
+            }
+
+            .icons .nav-item-icon{
+                width: 35px;
+                height: 35px;
+                background: rgb(191, 189, 189);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding: 5px;
+            }
+
+            .icons .nav-item-icon img{
+                width: 35px;
+            }
+            /* end navbar  */
+
+            /* start banner  */
+            .banners{
+                position: relative;
+            }
+
+            .banner img{
+                width: 100%;
+                height: 70%;
+            }
+
+            .container_banner{
+                position: absolute;
+                top: 70px;
+                left: 150px;
+            }
+
+            .container_banner .banner-text{
+                font-size: 50px;
+                font-weight: bold;
+                color: green ;
+            }
+
+            .container_banner .banner-subtext{
+                /* width: 100%; */
+                /* height: 100%; */
+                font-size: 30px;
+                font-weight: bold;
+                color: #ffffff;
+                background-color: red;
+                border: 2px solid red;
+                border-radius: 5px;
+
+                padding: 10px;
+            }
+
+            .container_banner button{
+                font-size: 20px;
+                font-weight: bold;
+                
+                color: #ffffff;
+                background-color: green;
+                border: 2px solid green;
+                border-radius: 5px;
+
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .container_banner button:hover{
+                background: none;
+                border: 2px solid green;
+                opacity: 0.8;
+            }
+            /* end banner  */
+
+            /* Start Floating Image Section */
+            .floatings{
+                width: 80%;
+
+                display: flex;
+                /* justify-content: center; */
+                align-items: center;
+
+                position: relative;
+                margin: 20px;
+                padding: 20px;
+               
+                border: 5px solid #ffffff;
+            }
+
+            .floatingimg{
+                width: 80%;
+
+                display: flex;
+                /* justify-content: center; */
+                align-items: center;
+
+                position: absolute;
+                top: -150px;
+                right: 0;
+            }
+
+            .floatingimg .floatingimg-img1 img, .floatingimg .floatingimg-img2 img, .floatingimg .floatingimg-img3 img{
+                width: 300px;
+                height: 300px;
+                cursor: pointer;
+
+                border: 20px solid #ffffff;
+            }
+
+            .floatingimg .floatingimg-img1 img:hover, .floatingimg .floatingimg-img2 img:hover, .floatingimg .floatingimg-img3 img:hover{
+                /* width: 400px;
+                height: 400px; */
+                
+                transform: scale(1.1);
+
+                border: 20px solid #ffffff;
+            }
+
+            .floatingimg .floatingimg-img1 .floatingimg-text1{
+                font-size: 30px;
+                color: #ffffff;
+                font-weight: 800;
+                
+                position: absolute;
+                top: 50px;
+                left: 100px;
+            }
+
+            .floatingimg .floatingimg-img1 .floatingimg-text1{
+                font-size: 20px;
+                color: #ffffff;
+                font-weight: 800;
+                line-height: 10px;
+                
+                position: absolute;
+                top: 100px;
+                left: 130px;
+            }
+
+            .floatingimg .floatingimg-img3 .floatingimg-text3{
+                font-size: 20px;
+                color: #ffffff;
+                font-weight: 800;
+                line-height: 10px;
+                
+                position: absolute;
+                top: 100px;
+                right: 50px;
+            }
+            /* End Floating Image Section */
+
+
+            /* Start Advertisement Section */
+            /* start adv-table1  */
+            .adv-table1{
+                width: 80%;
+                padding: 150px;
+            }
+
+            .adv-table1 p{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                
+                display: flex;
+                align-items: center;
+            }
+
+            .advone .imgs1{
+                width: 180px;
+                height: 200px;
+                /* padding-right: 30px; */
+
+                display: flex;
+                align-items: center;
+
+                border: 2px solid green;
+                border-radius: 6px;
+                margin: 10px;
+
+                cursor: pointer;
+            }
+
+            .advone .imgs2{
+                width: 100px;
+                height: 40px;
+                padding-right: 30px;
+
+                display: flex;
+                align-items: center;
+            }
+            /* end adv-table1  */
+
+
+            /* start customers-c */
+            .adv-table1 .imgs3{
+                width: 70px;
+                height: 90px;
+                padding: 6px;
+
+                border: 2px solid #b6b6b6;
+                border-radius: 6px;
+                margin-left: 10px;
+
+                cursor: pointer;
+            }
+
+            .tables .imgs4{
+                width: 100px;
+                height: 40px;
+                padding-right: 50px;
+            }
+
+            .customers-c{
+                width: 100%;
+
+                font-style: normal;
+                font-family: Arial, Helvetica, sans-serif;
+                color: gray;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .customers-c .csutext{
+                color: #000000;
+                font-weight: 400;
+                padding-left: 12px;
+            }
+
+            .customers-c p{
+                color: gray;
+                font-weight: bold;
+            }
+
+            .tables{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border: 2px solid green;
+                border-radius: 10px;
+                margin: 16px;
+                padding-top: 12px;
+            }
+            /* end customers-c */
+
+            /* start specialoccasions  */
+            .spec .spec1{
+                font-size: 20px;
+            }
+
+            .spec .spec2{
+                font-size: 16px;
+                color: green;
+
+                cursor: pointer;
+            }
+
+            .spec .spec3, .spec .spec4{
+                font-size: 16px;
+                color: gray;
+
+                cursor: pointer;
+            }
+
+            .specialoccasions .imgs5{
+                width: 300px;
+                height: 300px;
+
+                border: 2px solid green;
+                border-radius: 10px;
+                margin-bottom: 0;
+                margin-left: 16px;
+                padding-top: 12px;
+
+                cursor: pointer;
+            }
+
+            .specialoccasions .imgs6{
+                width: 130px;
+                height: 50px;
+                padding-left: 8px;
+                margin: 0;
+
+                display: flex;
+                align-items: center;
+            }
+
+            .specialoccasions .spec-text{
+                font-size: 20px;
+                color: gray;
+                font-weight: bold;
+                padding-left: 20px;
+                padding-top: 0;
+                padding-bottom: 10px;
+            }
+
+            .occasions{
+                display: flex;
+                align-items: center;
+            }
+
+            /* End specialoccasions  */
+
+            /* Start Best Sellers  */
+            .bestsellers{
+                display: flex;
+                align-items: center;
+            }
+
+            .besttext{
+                font-size: 20px;
+                color: gray;
+                font-weight: bold;
+                padding-left: 20px;
+                padding-top: 0;
+                /* padding-bottom: 10px; */
+            }
+
+            .bestsellers .spec-text{
+                font-size: 20px;
+                color: gray;
+                font-weight: bold;
+                padding-left: 20px;
+            }
+            
+            .bestsellers .imgs7{
+                width: 300px;
+                height: 300px;
+
+                border: 2px solid green;
+                border-radius: 10px;
+                margin-left: 16px;
+                padding-top: 12px;
+
+                cursor: pointer;
+            }
+
+            .bestsellers .imgs8{
+                width: 130px;
+                height: 50px;
+                padding-left: 8px;
+                margin: 0;
+
+                display: flex;
+                align-items: center;
+            }
+            
+            /* End Best Sellers  */
+            /* End Advertisement Section */
+
+            .boxsection .boxs{
+                width: 100%;
+                height: 150px;
+                background-color: #808080;
+                margin-bottom: 80px;
+                margin-top: 0;
+            }
+
+
+            /* Start Footer Section */
+            .footer .footerbranch{
+                width: 100%;
+                display: flex;
+                margin-left: 60px;
+
+                /* align-items: center; */
+            }
+
+            .footerbranch img{
+                width: 20px;
+                height: 16px;
+                padding-right: 13px;
+            }
+
+            .footerb1 .footericon{
+                width: 150px;
+                height: 90px;
+
+                cursor: pointer;
+            }
+
+            .copyright, .footerb1, .footerb2, .footerb3, .footerb4{
+                margin-left: 100px;
+            }
+
+            .footerb1 .footerb1-text{
+                font-size: 16px;
+                padding: 10px 0;
+            }
+
+            .footerbranch .footer-links{
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+
+            .footerbranch li{
+                list-style-type: none;
+            }
+
+            .footerbranch .footer-links{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                /* font-size: 30px; */
+                font-weight: 800;
+                color: black;
+                text-decoration: none;
+            }
+
+            .footerbranch .footer-links:hover{
+                cursor: pointer;
+                text-decoration: underline green;
+            }
+
+            .footerbranch a{
+                font-family: 'Times New Roman', Times, serif;
+                color: gray;
+
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 30px;
+                
+                text-decoration: none;
+            }
+
+            .footerbranch .footerlogo{
+                width: 250px;
+                height: 70px;
+            }
+
+            .text-center{
+                width: 100%;
+                height: 70px;
+                font-size: 16px;
+
+                background-color: #f0f0f0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                /* padding-top: 5px; */
+            }
+            /* End Footer Section */
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- start header section -->
+        <div class="header">
+            <div class="titlebars">
+                <p>WELCOME TO FLOWER.COM <span class="titlebar1"> | </span> <span class="titlebar2"> WE ARE THE FLOWER DELIVERY EXPERT. </span>  </p>
+            </div>
+        </div>
+        <!-- end header section -->
+
+        <!-- start navbar  --> 
+        <nav class="navbar">
+            <div class="logo">
+                <div class="nav-item"><img src="https://i.postimg.cc/66fcYgQX/three-lines-setting-icon-removebg-preview.png"  class="logo-image" /> </div>
+                <span><img src="https://i.postimg.cc/fbMyp4V3/fl-logo.png" /></span>
+            </div>
+
+            <div class="right-menu">
+                <div class="dropdown-menu-items">
+                    <div class="dropdown">
+                        <div class="dropdown-menu">
+                            <a href="#" class="nav-link">OCCATIONS</a>
+                            <ul class="dropdown-items">
+                                <li><a href="javascript:void(0);" class="dropdown-item">Birthday</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Get Well</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Thinking Of You</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Love</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Aniversary</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Sympathy</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Funeral</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Congratulation</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Just Because</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">New Bab</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Thank You</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div class="dropdown-menu">
+                            <a href="#" class="nav-link">FLOWERS</a>
+                            <ul class="dropdown-items">
+                                <li><a href="javascript:void(0);" class="dropdown-item">Best Sellers</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Flowers</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Roses</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Lilies</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Daisies</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Orchids</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Tulips</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Flowers in Basket</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Flowers & balloons</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">International</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div class="dropdown-menu">
+                            <a href="#" class="nav-link">SYMPATHY</a>
+                            <ul class="dropdown-items">
+                                <li><a href="javascript:void(0);" class="dropdown-item">Flowers To Funeral</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Funeral Standing Sprays</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Funeral Wreathျ</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Sympathy Flowers</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Sympthy Flowers To Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <div class="dropdown-menu">
+                            <a href="#" class="nav-link">CATEGORIES</a>
+                            <ul class="dropdown-items">
+                                <li><a href="javascript:void(0);" class="dropdown-item">Flowers</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Roses</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Gift Baskets</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">Plants</a></li>
+                                <li><a href="javascript:void(0);" class="dropdown-item">International</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icons">
+                    <div class="nav-item-icon"><img src="https://i.postimg.cc/kgzv2dTr/search-icon-removebg-preview.png" alt="searchicon"/>  </div>
+                    <div class="nav-item-icon"><img src="https://i.postimg.cc/TY29S0yK/user-icon-removebg-preview.png" alt="usericon"/>  </div>
+                    <div class="nav-item-icon"><img src="https://i.postimg.cc/2SVxj5F7/phone-icon-removebg-preview.png" alt="phoneicon"/>  </div>
+                    <div class="nav-item-icon"><img src="https://i.postimg.cc/wTPmVQLD/card-removebg-preview.png" alt="cardicon"/>  </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navbar  -->
+
+        <!-- Start Banner  -->
+        <section class="banner">
+            <div class="banners">
+                <img src="https://i.postimg.cc/MHLjJ9hg/christmas400-lg.webp"/>
+                <div class="container_banner">
+                    <h1 class="banner-text"> HAPPY HOLIDAYS </h1>
+                    <h3 class="banner-subtext"> Flowers & Gifts </h3>
+                    <button type="button"> SHOP NOW </button>
+                </div>
+            </div>
+        </section>
+        <!-- End Banner  -->
+
+        
+        <!-- Start Floating Image Section -->
+        <section>
+            <div class="container">
+                <div class="floatings">
+                    <div class="floatingimg">
+                        <div class="floatingimg-img1">
+                            <img src="https://i.postimg.cc/t4Ck2hvB/birthday600-med.webp" />
+                            <div class="floatingimg-text1">
+                                <h1>Birthday </h1>
+                                <h1>Flowers</h1>
+                            </div>
+                        </div>
+
+                        <div class="floatingimg-img2">
+                            <img src="https://i.postimg.cc/50vS6pjC/sympathy.webp" />
+                        </div>
+
+                        <div class="floatingimg-img3">
+                            <img src="https://i.postimg.cc/TPK9XT6y/funeralflowers.webp" />
+                            <div class="floatingimg-text3">
+                                <h1>Funeral</h1>
+                                <h1>Services</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Floating Image Section -->
+
+        <br/><br/>
+
+
+        <!-- Start Advertisement Section  -->
+        <section>
+            <div class="adv-table1">
+                <p>Same Or Next Day</p>
+                <table class="advone">
+                    <tr align="left">
+                        <td><img src="https://i.postimg.cc/NjfDp1PY/Christmas-Flowers.jpg" class="imgs1"/></td>
+                        <td><img src="https://i.postimg.cc/0y2ncpXL/Christmas-Centerpieces.jpg" class="imgs1"/></td>
+                        <td><img src="https://i.postimg.cc/cHYBrT6K/Poinsettias.jpg" class="imgs1"/></td>
+                        <td><img src="https://i.postimg.cc/qqTXnnCL/Wreaths.jpg" class="imgs1"/></td>
+                        <td><img src="https://i.postimg.cc/XY7LQw1t/Christmas-Gifts.jpg" class="imgs1"/></td>
+                        <td><img src="https://i.postimg.cc/wjT20h4F/Birthday-Flowers.jpg" class="imgs1"/></td>
+                    </tr>
+
+                    <tr align="left">
+                        <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs2"/></td>
+                        <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs2"/></td>
+                        <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs2"/></td>
+                        <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs2"/></td>
+                        <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs2"/></td>
+                        <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs2"/></td>
+                    </tr>
+
+                    <tr align="left">
+                        <td>Christmas Flowers</td>
+                        <td>Christmas Centerpieces</td>
+                        <td>Poinsettias</td>
+                        <td>Wreaths</td>
+                        <td>Christmas Gifts</td>
+                        <td>Birthday Flowers</td>
+                    </tr>
+                </table>
+
+                <br/><br/>
+
+                <div class="customers-c">
+                    <table   cellpadding="3px" cellspacing="3px" class="tables">
+                        <tr>
+                            <td colspan="2" class="csutext">Thank You</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/ZqWchJSg/Large-Flower-Vase-Arrangement.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs4"/><p>$139.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Large Flower Vase Arrangement</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/brhHbb2g/White-Flower-Elegance.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$84.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">White Flower Elegance</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/cL4hXQ5d/Clean-and-Pure-Arrangement.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$49.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Clean and Pure Arrangement</td>
+                        </tr>
+                    </table>
+
+                    <table   cellpadding="3px" cellspacing="3px" class="tables">
+                        <tr>
+                            <td colspan="2" class="csutext">Just Because</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/ZqWchJSg/Large-Flower-Vase-Arrangement.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs4"/><p>$139.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Large Flower Vase Arrangement</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/brhHbb2g/White-Flower-Elegance.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$84.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">White Flower Elegance</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/cL4hXQ5d/Clean-and-Pure-Arrangement.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$49.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Clean and Pure Arrangement</td>
+                        </tr>
+                    </table>
+
+                    <table   cellpadding="3px" cellspacing="3px" class="tables">
+                        <tr>
+                            <td colspan="2" class="csutext">Roses</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/zf4kz4Dv/Pink-Rose.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs4"/><p>$64.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Pink Roses</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/dVHBXLzw/Dozen-Red-Roses.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$64.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Dozen Red Roses</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/dVHBXLzw/Dozen-Red-Roses.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$64.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Dozen Red Roses</td>
+                        </tr>
+                    </table>
+
+                    <table   cellpadding="3px" cellspacing="3px" class="tables">
+                        <tr>
+                            <td colspan="2" class="csutext">Plants</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/rp79V7yz/Poinsettia-Garden-Basket.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs4"/><p>$54.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Poinsettia Garden Basket</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/W3rwhSt3/Red-Basket-Garden.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$59.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Red Basket Garden</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="https://i.postimg.cc/TPBcdBdz/Large-poinsettia.jpg" class="imgs3"/></td>
+                            <td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png" class="imgs4"/><p>$54.99</p></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="csutext">Large Poinsettia</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <br/><br/>
+
+                <div class="specialoccasions">
+                    <table cellpadding="20px" class="spec"> 
+                        <tr>
+                            <td class="spec1">Special Occasions</td>
+                            <td class="spec2">Birthday</td>
+                            <td class="spec3">Thinking of You</td>
+                            <td class="spec4">Anniversary</td>
+                        </tr>
+                    </table>
+
+                    <div class="occasions">
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/W1vL3f3F/A-Vibrant-Sunset.jpg" class="imgs5"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs6"/></td></tr>
+                            <tr><td class="spec-text">A Vibrant Sunset</td></tr>
+                            <tr><td  class="spec-text">$69.99</td></tr>
+                        </table>
+
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/MpPD4vhw/Delicate-Delightful.jpg" class="imgs5"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs6"/></td></tr>
+                            <tr><td class="spec-text">Delicate & Delightful</td></tr>
+                            <tr><td  class="spec-text">$59.99</td></tr>
+                        </table>
+
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/nhRk5C6V/Enhanced-Love.jpg" class="imgs5"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs6"/></td></tr>
+                            <tr><td class="spec-text">Enchanted Love</td></tr>
+                            <tr><td  class="spec-text">$89.99</td></tr>
+                        </table>
+
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/Z5KHVrsP/Bear-Roses-Birthday-Duo.jpg" class="imgs5"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs6"/></td></tr>
+                            <tr><td class="spec-text">Bear & Roses</td></tr>
+                            <tr><td  class="spec-text">$79.99</td></tr>
+                        </table>
+                    </div>
+                    
+                </div>
+
+                <br/><br/>
+
+                <div class="bestsellerssection">
+                    <p class="besttext">Best Sellers</p>
+
+                    <div class="bestsellers">
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/g01Kz1c9/Large-Mixed.jpg" class="imgs7"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs8"/></td></tr>
+                            <tr><td class="spec-text">Large mixed Vase Arrangement</td></tr>
+                            <tr><td  class="spec-text">$100.99</td></tr>
+                        </table>
+
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/TPBcdBdz/Large-poinsettia.jpg" class="imgs7"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs8"/></td></tr>
+                            <tr><td class="spec-text">Butterfly Basket</td></tr>
+                            <tr><td  class="spec-text">$59.99</td></tr>
+                        </table>
+
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/Wzv6rrJ0/White-Bear.jpg" class="imgs7"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs8"/></td></tr>
+                            <tr><td class="spec-text">White Bear & Bouquet</td></tr>
+                            <tr><td  class="spec-text">$49.99</td></tr>
+                        </table>
+
+                        <table cellpadding="3px" cellspacing="3px">
+                            <tr><td><img src="https://i.postimg.cc/cL4hXQ5d/Clean-and-Pure-Arrangement.jpg" class="imgs7"/></td></tr>
+                            <tr><td><img src="https://i.postimg.cc/wj7WH43Z/download-1-removebg-preview.png"  class="imgs8"/></td></tr>
+                            <tr><td class="spec-text">Glorious Thin</td></tr>
+                            <tr><td  class="spec-text">$49.99</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="boxsection">
+            <div class="boxs"></div>
+        </section>
+
+        <!-- Start Footer Section  -->
+        <footer class="footercontainer">
+            <div class="footer">
+                <div class="footerbranch">
+                    <div class="footerb1">
+                        <span><img src="https://i.postimg.cc/fbMyp4V3/fl-logo.png" class="footerlogo"/></span>
+                        <p class="footerb1-text">In Business since 1996.</p>
+                        <div class="footericon">
+                            <img src="https://i.postimg.cc/fyNjXX0d/Visa.png" alt="visacard" />
+                            <img src="https://i.postimg.cc/DzRcvRfh/mastercard.png" alt="mastercard" />
+                            <img src="https://i.postimg.cc/rwnJbKvk/discover.png" alt="discover" />
+                            <img src="https://i.postimg.cc/BnqYRWbT/american-express.png" alt="americanexpress" />
+                        </div>
+                    </div>
+
+                    <div class="footerb2">
+                        <ul class="footerlis">
+                            <li><a href="javascript:void(0);" class="footer-links">SUPPORT</a></li>
+                            <li><a href="javascript:void(0);" >Order Status</a></li>
+                            <li><a href="javascript:void(0);" >Customer Service</a></li>
+                            <li><a href="javascript:void(0);" >Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerb3">
+                        <ul class="footerlis">
+                            <li><a href="javascript:void(0);" class="footer-links">CONTACT</a></li>
+                            <li><a href="javascript:void(0);" ><u>Email Us:</u> Service@Flower.Com</a></li>
+                            <li><a href="javascript:void(0);" ><u>Order By Phone:</u> 800 777 1911</a></li>
+                            <li><a href="javascript:void(0);" ><u>Support Phone:</u> 800 715 2215</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerb4">
+                        <ul class="footerlis">
+                            <li><a href="javascript:void(0);" class="footer-links">COMPANY</a></li>
+                            <li><a href="javascript:void(0);" >About Us</a></li>
+                            <li><a href="javascript:void(0);" >Delivery FAQ</a></li>
+                            <li><a href="javascript:void(0);" >Our Guarantee</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div>
+                <div class="text-center">
+                    <p class="copyright"> &copy; 1996 - 2025 FLOWER.COM</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Section  -->
+
+    </body>
+</html>
+
+
+            
+        
+
+        
+
+      
+        
+
+       
