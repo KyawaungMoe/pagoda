@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team-2 Bagan Project</title>
+
+    <style>
+        .bg{
+        padding-top: 0px;
+        width: 1480px;
+        height: 100vh;
+      }
+			p{
+				padding-left: 0px;
+				padding-top: 0px;
+				height: 24px;
+			
+				font-size: 14PX;
+				font-weight: 100;
+			}
+        /* Logo + Title container From Hein Min Ag*/
+
+        .icon-title {
+            display: flex;
+            align-items: center;
+            background: #66ba6a;
+        }
+
+        .upheader{
+            height: 50px;
+            padding: 10px;
+        }
+
+        .icon-title h2 {
+            margin: 0 20px;
+            flex-grow: 1;
+        }
+        .menu-btn {
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            border-radius: 10px;
+        }
+
+        .btns-link {
+            display: flex;
+            gap: 10px;
+            padding-right: 30px;
+        }
+
+        .btns-link .btn {
+            background: white;
+            border: none;
+            border-radius: 7px;
+            padding: 8px 14px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #1abc9c;
+            font-size: 15px;
+            text-align: center;
+        }
+
+
+
+
+        /* General Styles & Typography KAM*/
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1420px;
+            margin: 0 auto;
+            padding: 5px 25px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #217bd5;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.3em;
+            font-weight: bold;
+            color: white;
+            padding-left: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Hero Section (Team Photo & Call to Action) */
+        .hero {
+            position: relative;
+            height: 610px; /* Adjust as needed */
+            background: linear-gradient(135deg, #d5f505 0%, #6fb6e4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .hero::before { /* Overlay for better text readability */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fffff0;
+    min-width: 270px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333 !important; /* Ensure text is visible against white bg */
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #007bff !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the 'small' arrow */
+.dropbtn small {
+    font-size: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+/* Level 2 Positioning adjustment */
+.dropdown-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Level 3 Container (Flyout) */
+.flyout {
+    position: relative; /* Anchor for the next level */
+}
+
+.flyout-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Push to the right of the parent */
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 4px 4px 4px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Show Level 3 on Hovering Level 2 Item */
+.flyout:hover > .flyout-content {
+    display: block;
+}
+
+/* Visual tweaks for Level 3 links */
+.flyout-content li a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Small arrow for right-side indication */
+.flyout > a small {
+    float: right;
+    font-size: 10px;
+    margin-top: 3px;
+}
+        /* Section Styling */
+        section {
+            padding: 10px 0;
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        section:nth-of-type(even) {
+            background-color: #e9ecef;
+        }
+
+        /* About Us Section */
+        .about-us p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .features-grid2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 25px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-item2 {
+            text-align: center;
+            padding: 5px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-item h3 {
+            color: #007bff;
+            margin-bottom: 5px;
+            font-size: 1.4em;
+        }
+
+        .feature-item p {
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+      
+            background: linear-gradient(rgb(190, 238, 45), rgb(0, 76, 255));
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 4cqi;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 320px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+           
+            }
+        }
+
+        img{
+            width: 360px;
+            height: 240px;
+        }
+
+        
+        img2{
+            width: 200px;
+            height: 200px;
+        }
+        .search-box{
+            padding-left: 200px;
+            width: 200px;
+            border-radius: 10px;
+           
+        }
+        .homepage{
+            position:fixed;
+            top: 630px;	
+            padding-left: 1300;				
+		}
+
+
+       /* သမိုင်းကြောင်းများအတွက် style*/
+         .trigger-btn {
+            padding: 10px 20px; font-size: 16px; cursor: pointer;
+            background: #007bff; color: white; border: none; 
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .trigger-btn:hover { background: #0056b3; }
+
+        /* Modal Background (Overlay) */
+        .modal {
+            display: none; /* ပုံမှန်အချိန်တွင် ပိတ်ထားမည် */
+            position: fixed; z-index: 2000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7); /* အနောက်ကို မှောင်ထားရန် */
+            backdrop-filter: blur(5px); /* အနောက်ကို ဝါးထားရန် */
+        }
+
+        /* Modal Content Box */
+        .modal-content {
+            position: relative; background-color: #fff;
+            margin: 5% auto; /* အပေါ်မှ ၅% ချန်မည် */
+            width: 90%; max-width: 900px; /* အကျယ်ကို ကန့်သတ်မည် */
+            border-radius: 10px; overflow: hidden;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute; right: 20px; top: 15px;
+            font-size: 30px; font-weight: bold; color: #333;
+            cursor: pointer; z-index: 10;
+        }
+
+        /* Modal Body (စာသားနှင့် ပုံရှိမည့်နေရာ) */
+
+        .modal-body {
+            max-width: 860px;
+            max-height: 80vh; /* Screen အမြင့်ရဲ့ ၇၀% ထက်ကျော်ရင် Scroll ပေါ်မည် */
+            overflow-y: auto; /* စာများလျှင် Scroll bar ပေါ်စေရန် */
+            padding: 20px; text-align: left; line-height: 1.8;
+        }
+
+        .modal-body img {
+            width: 100%; height: auto; border-radius: 5px; margin-bottom: 20px;
+        }
+
+        .modal-body h2 { color: #2c3e50; margin-bottom: 15px; }
+
+        /* Scroll bar ကို လှပအောင် ပြင်ဆင်ခြင်း */
+        .modal-body::-webkit-scrollbar { width: 8px; }
+        .modal-body::-webkit-scrollbar-track { background: #f1f1f1; }
+        .modal-body::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        .modal-body::-webkit-scrollbar-thumb:hover { background: #555; }
+
+
+
+        .map-container {
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* အရိပ်အနည်းငယ် ထည့်ခြင်း */
+        }
+
+        .map-container iframe {
+            display: block;
+        }
+
+    /* View Image ကို နှိပ်လိုက်ရင် ပုံအကြီးပေါ်လာအောင်နဲ့ နောက်ခံကြည့်ကောင်းအောင် */
+        #imageViewer {
+        background-color: rgba(0, 0, 0, 0.9); /* နောက်ခံကို ပိုမှောင်ထားခြင်း */
+        padding-top: 0;
+        }
+
+        #imageViewer img {
+            animation: zoomIn 0.3s ease; /* ပုံပေါ်လာလျှင် zoom ဖြစ်သွားစေရန် */
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+
+
+    /* ပုံကြည့်ရန် Modal သီးသန့် Style */
+        #imageViewer {
+            display: none;
+            position: fixed;
+            z-index: 10000; /* အားလုံးရဲ့ အပေါ်ဆုံးမှာရှိရန် */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95); /* နောက်ခံကို အမည်းရောင် ပိုရင့်စေရန် */
+            padding-top: 0 !important; /* အရင် padding 100px ကို ပယ်ဖျက်ရန် */
+        }
+
+        #imageViewer .image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #imageViewer img {
+            max-width: 95%; /* ဘေးဘက်တွင် နေရာလွတ် အနည်းငယ် ချန်မည် */
+            max-height: 90vh; /* Screen အမြင့်ရဲ့ ၉၀% အထိ ချဲ့ပေးမည် */
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border: 3px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            animation: zoomEffect 0.3s ease-out;
+        }
+
+        @keyframes zoomEffect {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #imageViewer .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            z-index: 10001;
+        }
+
+        /* ပုံကြည့်ရန် Modal သီးသန့် Style !important*/
+        #imageViewer {
+            display: none; 
+            position: fixed !important;
+            z-index: 9999 !important; /* အားလုံးရဲ့ အပေါ်ဆုံးမှာ ရှိစေရန် */
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: rgba(0, 0, 0, 0.95) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important; /* Scroll မပေါ်စေရန် */
+        }
+
+        .viewer-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        #fullSizeImg {
+            max-width: 95% !important;
+            max-height: 95vh !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            border: 3px solid white !important;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5) !important;
+            animation: zoomEffect 0.3s ease-out;
+        }
+
+        @keyframes zoomEffect {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #imageViewer .close-btn {
+            position: absolute !important;
+            top: 20px !important;
+            right: 30px !important;
+            color: #fff !important;
+            font-size: 50px !important;
+            font-weight: bold !important;
+            cursor: pointer !important;
+            z-index: 10001 !important;
+        }
+
+
+          .forword{
+				
+				
+				position:absolute;
+				top: 490px;
+          }
+
+    </style>
+</head>
+<body>
+    <div class="icon-title">
+            <div class="upheader">
+            <img src="https://i.postimg.cc/Dm3WyL0w/bicon.jpg" style="width: 80px; height: 50px; padding-left: 10px;">
+            </div>
+            <h2>Discover Bagan</h2>
+            <div class="btns-link" style="padding-right: 30px;">
+            <a href="login.html" class="btn" >Login</a>
+            </div>
+    </div>
+    <header id="home">
+       
+        
+        <div class="container">
+            <div class="logo"></div>
+            <nav >
+                <ul>
+                    <li><a href="#">Home </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Pagoda<small>▼</small></a>
+                        <ul class="dropdown-content">
+                            <li><a  onclick="openModal('modal13')">Brief history of Bagan</a></li>
+                           <!----- <button class="trigger-btn" onclick="openModal('modal13')">Brief history of Bagan</button>--->
+                            <li class="flyout">
+                                <a href="#features">Famous Bagan temples <small></small></a>
+                            </li>
+                            <li><a href="#baganview">The beauty of Bagan landscape</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Toursim">Travallers Guide</a></li>
+                    <li><a href="#hotel">Hotel</a></li>
+                    <li><a href="#hotel">About Us</a></li>
+                
+                    <div class="search-box">
+                        <input type="text" placeholder="ရှာဖွေရန်..." style="height: 24px; width: 200px;">
+                    </div>
+                </ul>
+            </nav>
+           
+        </div>
+    </header>
+
+    <main>
+         
+ 
+            <div style="background-image: url(shwe\ se\ khun\ Pagoda.webp); height: 550px; padding-top: 60px;" class="bg">
+           
+            </div>
+       <section>
+
+       </section>
+
+        <div>
+        <ul class="forword">
+            <li >
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/shwe%20se%20khun%20Pagoda.webp" style="width: 350px; height: 220px;">
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Loka_Nanda_temple.jpg" style="width: 350px; height: 220px;">
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda.webp" style="width: 350px; height: 220px;">
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung1.jpg" style="width: 350px; height: 220px;">
+                
+
+                
+            </li>    
+        </ul>
+
+
+
+
+        <section id="features" class="container">
+            <h2>Famous Bagan Pagoda <a style="padding-left: 1055px;"></a><a href="#home" class="btn btn-small" style="font-size: 14px;">Home</a></h2>
+           
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Shwe Se Khun Pagoda</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/shwe%20se%20khun%20Pagoda.webp">
+                    <button class="trigger-btn" onclick="openModal('modal1')">To read history</button>
+                   
+                </div>
+                <div class="feature-item">
+                    <h3>Ar Nan da Pagoda</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda.webp">
+                    <button class="trigger-btn" onclick="openModal('modal2')">To read history</button>
+                </div>
+                <div class="feature-item">
+                    <h3>Bu Pagoda</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda.webp">
+                    <button class="trigger-btn" onclick="openModal('modal3')">To read history</button>
+                </div>
+                <div class="feature-item">
+                    <h3>Thant Kyi Taung Pagoda</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thantkyitaung%20psgoda.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal4')">To read history</button>
+                </div>
+                <div class="feature-item">
+                    <h3>Lawka Nanda Pagoda</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda1.png">
+                    <button class="trigger-btn" onclick="openModal('modal5')">To read history</button>
+                </div>
+                <div class="feature-item">
+                    <h3>Thu Yin Taung Pagoda</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal6')">To read history</button>
+                </div>
+            </div>
+            
+        </section>
+
+        <section>
+        </section>
+               
+        <section id="baganview" class="container">
+            <h2>The beauty of Bagan landscape <a style="padding-left: 955px;"></a><a href="#home" class="btn btn-small" style="font-size: 14px;">Home</a></h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Ancient Wonders of the Timeless Temples in Bagan</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint1.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal7')">viewImage</button>
+                   
+                </div>
+                <div class="feature-item">
+                    <h3>Ancient Wonders of the Heritage in Bagan</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint2.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal8')">viewImage</button>
+                   
+                </div>
+                <div class="feature-item">
+                    <h3>Ancient temple in Bagan <br> after sunset </h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint3.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal9')">viewImage</button>
+                   
+                </div>
+                <div class="feature-item">
+                    <h3>Bagan Cultural Heritage Area</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint4.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal10')">viewImage</button>
+                   
+                </div>
+                <div class="feature-item">
+                    <h3>Bagan World Cultural Heritage</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint5.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal11')">viewImage</button>
+                   
+                </div>
+                <div class="feature-item">
+                    <h3>Ancient buildings in Bagan</h3>
+                    <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint6.jpg">
+                    <button class="trigger-btn" onclick="openModal('modal12')">viewImage</button>
+                   
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+
+<!-------Shwesekhun History-------------->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Shwe Se Khun Pagoda History</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/shwe%20se%20khun%20Pagoda.webp" alt="Detail Image" >
+            
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ပုဂံမင်းဆက် (၅၅) ဆက်ရှိသည့်အနက် (၄၂) ဆက်မြောက် အနော်ရထာ မင်းတရားကြီးက ရွှေစည်းခုံစေတီတော်ကို ကောဇာသက္ကရာဇ် (၄၂၁) ခုနှစ်၊ 
+                    တပိုတွဲလဆန်း (၁၀)ရက် (၁၄-၁-၁၀၆၀) နေ့တွင်တည်ထား ကိုးကွယ်ခဲ့ပါသည်။ ပုဂံဒေသတွင် အနော်ရထာ မင်းတရားကြီးက ဘုရား၊ စေတီ (၁၅)ဆူ
+                     တည်ထားခဲ့ရာ ရွှေစည်းခုံ စေတီတော်သည် နောက်ဆုံးတည်ထားခဲ့သောစေတီ ဖြစ်သည်။</span>
+                </p>
+                    
+                <p></p>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/shwe%20se%20khun%20Pagoda2.webp">
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    နောင်အနှစ်(၃၀)အကြာတွင် ကျန်စစ်သားမင်းကြီးက မူလစေတီကို ငုံ၍ ထပ်မံတည် ခဲ့ပါသဖြင့် နှစ်ထပ်စေတီဖြစ်ပါသည်။ ပုဂံဒေသတွင် နှစ်ထပ်စေတီ 
+                    (၄၅) ဆူရှိသည့်အနက် ရွှေစည်းခုံစေတီတော်မှာ ထူးခြားပါသည်။ မူလစေတီနှင့်ထိကပ်၍ တည်ခြင်းမဟုတ်ပဲ၊ လှည်းတစ်ခွင်စာခြား၍ ငုံတည်ထားခြင်း
+                     ဖြစ်ပါသည်။ ကျန်စစ်သားမင်းကြီးက ကောဇာ သက္ကရာဇ် ၄၅၁-ခုနှစ် တန်ဆောင်မုန်းလဆန်း (၁၃)ရက် (၁၈-၁၀-၁၀၈၉) နေ့တွင် မူလစေတီကို ငုံ၍ 
+                     တည်ခဲ့ပါသည်၊ ကောဇာသက္ကရာဇ် ၄၅၂-ခုနှစ် ကဆုန်လပြည့် (၁၅-၄-၁၀၉၀)နေ့တွင် ပြီးစီး ခဲ့ပါသည်။ ယခုလက်ရှိမြင်တွေ့ဖူးမြော်နေရသော 
+                     စေတီတော်ကြီးကို (၆)လ၊ (၃)ရက်နှင့် အပြီးတည်ဆောက်ခဲ့သဖြင့် လူတစ်ရစ်၊ နတ်နှစ်ရစ် ဖြင့် တည်ဆောက် ခဲ့သည်ဟု အဆိုရှိပါသည်။
+                      ပုဂံဒေသတွင် ကျန်စစ်သားမင်းကြီးက ဘုရား၊ စေတီ (၂၄)ဆူ တည်ထားခဲ့ရာ ရွှေစည်းခုံစေတီတော်သည် (၁၃) ဆူမြောက်စေတီ ဖြစ်ပါသည်။</span>
+                </p>
+                    
+                <br><br><br><br>
+                <h2>ရွှေစည်းခုံစေတီတော်တည်ထားခြင်း</h2>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အနုရုဒ္ဓ ဒေဝ အမည်ရသော အနော်ရထာမင်းတရားကြီး(၁၀၄၄-၁၀၇၇) သည် အသျှင်အရဟံ အစရှိသော ဆရာတော်၊ သံဃာတော်တို့နှင့် တို်ငပင်၍ 
+                    ခပ်သိမ်းသော သတ္တဝါ တို့၏ အကျိုးစီးပွားအလို့ငှာ၊ သာသနာတော် ငါးထောင်ပတ်လုံး တည်စေလို၍ ဂန္ဓာရတိုင်းက ရရှိခဲ့သော စွယ်တော်ပွားနှင့် 
+                    မြဆင်းတုတစ်ဆူ၊ ကမ်းယံပြည်ကရခဲ့သော နှဖူးသင်းကျစ် ညှပ်ရိုးတော်၊ ဒလမြို့မှ ရရှိခဲ့သော ဆံတော်ဓါတ်များကို ရတနာပန်းတောင်း အတွင်းထည့်၍ 
+                    ရတနာဆင်ဖြူပေါ်ပင့်ဆောင်ပြီး အဓိဌာန်ပြု လွှတ်လေသည်။</span></p>
+                       <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ဆင်ဖြူတော်သည် ယခုရွှေစည်းခုံဘုရားတည်ရာ သဲစဲခုံ၌ ဝပ်လေရာ၊ သယံဇာတမြေတွင် မဝပ် ဧည့်မြေဖြစ်သော သဲစဲခုံ၌ ဝပ်ဘိ၏ဟု 
+                    အနော်ရထာမင်းတရားကြီး နှလုံးမသက်မသာဖြစ်လေသည်။ ထိုအခါ သိကြားမင်းက ပုဏ္ဏားရောင် ဆောင်၍ အောင်ဆုပေးကာ 
+                    မင်းကြီးအနီးသို့ချဉ်းကပ်လာပြီးလျှင် အရှင်မင်းကြီး-ဤအရပ်သည်ကား ဘုရားအလောင်းတော် ရွှေငါးကြင်း ဖြစ်စဉ်အခါ ကျင်လည်ရာ 
+                    အရပ်တည်း။ မစိုးရိမ်လင့်-ဤအရပ်သည်ကား သာသနာငါးထောင်တည်လတ္တံ့၊ နှစ်သိန်းလေးသောင်း အထူရှိသော မြေကို ကျောက်အတိပြီးစေ၍ 
+                    သံပြားအတိ ကွပ်ထားသည်ဖြစ်၍ မြဲမြံတည်တံ့ အရှည်ခံ့သော ထာဝရမြေပေတည်း ကြောင့်ကြဖွယ်မရှိဟု ဆိုပြီးလျှင် ကွယ်ပျောက်သွားလေသည်၊ 
+                    ထိုအခါ မင်းကြီးလည်း အလွန်ဝမ်းမြောက်သည်ဖြစ်၍ သက္ကရာဇ်(၄၂၁)ခုနှစ် တပိုတွဲလဆန်း (၁၀)ရက်၊ ကြာသပတေးနေ့၌ ရွှေစည်းခုံစေတီတော်ကြီးကို
+                    တည်လေ၏။</span>
+                </p>
+                   <br><br><br><br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/shwe%20se%20khun%20Pagoda3.webp" style="width: 160px; height: 200px;">
+                        <h4>သီတင်းကြီးစေတီ</h4>
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/tamahtatabake.jpg" style="width: 160px; height: 200px;">
+                        <h4 style="text-align: center;">သမထသပိတ်</h4>
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/shwethatsoe.jpg" style="width: 160px; height: 200px;">
+                        <h4>ရွှေသက်စိုးနတ်</h4>
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lion.jpg" style="width: 160px; height: 200px;">
+                        <h4>အရှေ့တောင်ခြင်သေ့</h4>
+                    </div>
+                </div>
+                  <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ထိုသို့ ရွှေစေတီငယ်ကိုတည်စဉ်အခါ အနော်ရထာမင်းကြီးကစဉ်းစား သည်မှာ ငါသည် တရုတ်ပြည်ကစွယ်တော်မြတ်ကို တောင်းပါသော်လည်းမရချေ၊ 
+                    သီဟိုဠ်ကျွန်းကစွယ်တော် ကိုရ၍ ဤစေတီတွင် ဌာပနာရသည်ရှိသော် သာသနာ ငါးထောင်တို်ငတို်င ခပ်သိမ်းသော သတ္တဝါ အပေါင်းတို့အား အကျိုးများစွာ
+                    ဖြစ်လတ္တံ။ သို့ဖြစ်၍ အသျှင်အရဟံထေရ်ဦးဆောင်၍ ကျန်စစ်သားအပါအဝင် သူရဲကောင်း (၄)ယောက်တို့ကို သီဟိုဠ်ကျွန်းသို့ စွယ်တော်ပင့်ရန် 
+                    စေလွှတ်ခဲ့သည်။ သီဟိုဠ်ဘုရင် ဓာတုသေနမင်းကြီးက ရှေးရှေးက ဘေးလောင်းတော်၊ ဘိုးလောင်းတော်မင်းအပေါင်းသည် ဘုန်းတန်းခိုးကြီးလှသော်လည်း
+                    ဆင်ဖြူရတနာ ရသည်ဟုမကြားဘူး၊ ယခုကားငါ၏ဘုန်းတန်းခိုးကြောင့် တို်ငးတပါးဘုရင် အနော်ရထာ ပေးပို့လာသော ဆင်ဖြူရတနာကိုရပေ၏ဟု 
+                    လွန်စွာဝမ်းမြောက် ပေသည်။ သို့ဖြစ်၍ ငါ့အဆွေ အနော်ရထာမင်းကြီး ပူဇော်လိုသည့်စွယ်တော်မြတ်ကို တစ်ဆူပွား၍ အရိမဒ္ဒနပုဂါရာမ
+                    ပြည်သို့ကြွတော်မူရန် လျှောက်ထား တောင်းပန်လေ၏ စွယ်တော်ပွားနှင့် မူလစွယ်တော် တို့သည် အမှန်အကန် မသိဖြစ် နေသဖြင့် 
+                    နောက်ပွားစွယ်တော်တို့သည် ငါ၏ဦးခေါင်းရတနာ ထက်သို့ ကြွပါစေသား ဟု အဓိဌာန်သဖြင့် စွယ်တော်ပွားသည် မင်းကြီး၏ ဦးခေါင်းထက်တွင်
+                    ကိန်းဝပ် တော်မူလေသည် အနော်ရထာမင်းကြီးသည် သီဟိုဠ်ကျွန်းကရရှိသော စွယ်တော် ပွားကို ရတနာဆင်ဖြူထက်သို့ ရတနာပြဿဒ်နှင့်တကွ 
+                    တင်ပြီးသော် ကိန်းဝပ် တော်မူလိုသောအရပ်၌ ဆင်ဖြူတော်ဝပ်စေဟု အဓိဌာန်၍ လွှတ်လေရာ ရွှေစည်းခုံ သို့တက်၍ ဝပ်လေသည်။ ထိုစွယ်တော်ပွားကို 
+                    ရွှေစည်းခုံ၌ ဌာပနာလေသည်။ သံတောင်ငါးတောင် ပမာဏရှိသော အတွင်းစေတီပြီး၍ ဘုံခုနှစ်ဆင့်ရှိသော ရတနာရွှေထီးတော်တင်ပြီးလျှင်၊ 
+                    စေတီတော်ကြီးအပြီးသို့ မရောက်မှီ အနော်ရထာမင်းကြီး နတ်ရွာစံသည်။</span>
+                </p>
+                   <br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/sutaunfpyaw.jpg" style="width: 160px; height: 200px;">
+                        <h4 style="text-align: center;">သီတင်းကြီးစေတီ</h4>
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/nattame.jpg" style="width: 160px; height: 200px;">
+                        <h4 style="text-align: center;">သမထသပိတ်</h4>
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/aphashwenyo.jpg" style="width: 160px; height: 200px;">
+                        <h4 style="text-align: center;">ရွှေသက်စိုးနတ်</h4>
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/pwesargyi.jpg" style="width: 160px; height: 200px;">
+                        <h4 style="text-align: center;">အရှေ့တောင်ခြင်သေ့</h4>
+                    </div>
+                </div>
+                   <br>               
+                   <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ကျန်စစ်သားမင်းကြီး မင်းဖြစ်ပြီး (၄)နှစ်အကြာ အသျှင်အရဟံထေရ်က “မင်းကြီးသည် အနော်ရထာမင်းကြီး၏ အမွေကို ဆက်ခံသူ ဖြစ်၏ 
+                    အနော်ရထာမင်းကြီးတည်ထားသည့် ရွှေစည်းခုံစေတီမှာ ငယ်တုံသေး၏ မူလရည်ရွယ်ခဲ့သည့်အတိုင်း လုပ်ဆောင်ပါရန်” မိန့်ကြားပါသည်။ 
+                    ကျန်စစ်သားမင်းကြီးက အရှင့်ကောင်းမှုတော်ကို ဆက်လက်တည်ထား ပါမည်ဟု လျှောက်ထားပါသည်။ မူလရွှေစေတီကိုငုံ၍ ယခုဖူးမြော်တွေ့ရှိရသော 
+                    စေတီတော်ကြီး ကိုတည်ထားခဲ့ပါသည်။ မူလစေတီကို ထိကပ်၍ တည်ခြင်းမဟုတ်ပဲ လှည်းတစ်ခွင်စာ ခွါ၍ တည်ထားခဲ့ပါသည်။ စတင်တည်ဆောက်စဉ်က
+                    မြစ်ခြေ (ယခု ပခုက္ကူမြို့နယ်၊ ပုဂံ၏ မြစ်တစ်ဖက်ကမ်း) အောင်သာ ဘက်က အုဌ်များဖြင့် စီစေရာ ထိကပ်မှုအားနည်းသဖြင့် ပြိုပျက်လေသည်။
+                    ယင်းသို့ဖြစ်ရခြင်းအပေါ် မင်းကြီးလည်း နှလုံးမသက်မသာ ရှိလေသည် ထိုအခါ သကြားမင်းက “မင်းကြီး မကြောင့်ကြလင့်၊ ကျောက်တုံးနှင့် 
+                    နွားနို့သစ်ကို သရွတ်ဖျော်၍ ကျောက်အုဌ် စီခင်းရသည်ရှိသော် အနှစ် (၅၀၀၀) တည်လတ္တံ့” ဟု အိမ်မက်လာပေးသည်။ ထိုအခါမှစ၍ 
+                    နိုင်ငံတော်အတွင်း မှ နို့ညစ်နွားမများ ဝယ်ယူ၍ နို့ညစ်စေရာ တစ်နေ့လျှင် အိုးစရီး(၁၀၀၀) ရသည်ဟူ၏။ သိကြားမင်းသည်လည်း ပန်းရံဆရာကြီး
+                    အယောင်ဆောင်လျက် အလျား(၃)ထွာ၊ အနံ (၁)ထွာ ပမာဏရှိသော ကျောက်အုဌ်တို့ကို ရွေးခြမ်းပေးလေ၏ ကျောက်အုဌ်တို့ကို တုရင်းတောင် 
+                    (ညောင်ဦးမြို့တောင်ဘက် ၇မိုင် အကွာတွင်ရှိ) မှ လက်ဆင့်ကမ်းသယ်ယူ တည်ဆောက် ခဲ့ပါသည်။ အသူရာနတ်များက ဟိမဝန္တာတောင်မှ စန္ဒကူးနံ့သာ 
+                    နှစ်တို့ကို မီးသွေးဖုတ်၊ ဘုမ္မဇို်ငးနတ်တို့က သမုဒ္ဒရာမှ ပုလဲစစ်ကိုဆောင်၍ ထုံးမှုန့်ဖုတ်၊ နဂါးတို့က နွားနို့၊ မီးသွေး၊ထုံး တို့ဖြင့် သရွက်ဖျော်၊ 
+                    ဇဝနနတ်တို့က လူတို့ကို ကြီးကြပ်၊ ဝိသကြုံနတ်က တောင်တာပိုင်းခြား၊ မာတလိနတ်သားစီမံ၊ လောကပါလနတ်မင်းကြီး(၄)ပါးက စောင့်ရှောက်၍ 
+                    လူတစ်ရစ်၊ နတ်နှစ်ရစ် တည်ခဲ့ပါသည်။</span>
+                </p>
+                   <br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/monbarta1.jpg" style="width: 160px; height: 200px;">
+                        
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/monbarta2.jpg" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/monbarta3.jpg" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/monbarta4.jpg" style="width: 160px; height: 200px;">
+                        
+                    </div>
+                </div>
+                   <br>
+                <p style="text-align: center;"><i>မွန်ဘာသာဖြင့် ရေးထိုးထားသော ကျန်စစ်သားမင်းကြီး၏ အတ္ထုပတ္တိဘဝဖြစ်စဉ် ကျောက်စာ</i></p>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အနော်ရထာမင်းကြီးက စေတီတော်ကို အလျား-အလံ(၈၀)၊ အနံ-အလံ(၈၀) အစောက်(အမြင့်) အလံ-၈၀ တည်ရန် ရည်ရွယ်ခဲ့ပါသည်။ 
+                    ယင်းအတိုင်းအတာမှာ လွန်စွာကြီးပါသည်။ သို့ဖြစ်ပါ၍ အလျား-အတောင်(၈၀)၊ အနံ-အတောင်(၈၀) အစောက် (အမြင့်) အလံ-၈၀ 
+                    တည်ဆောက်ခဲ့ပါသည်။ သံတောင်ဆိုရာမှာ ယခုခေတ် ပေကြိုး နှင့်တိုင်းသော် ပေ(၁၆၀) ရှိပါသည်။ အစောက်သံတောင်(၁၀) တောင်တူး၍ 
+                    ကျန်စစ်သား မင်းကြီးကိုယ်တို်င ရွှေအုဌ်ဖြင့် အုဌ်မြစ်ချလေသည်။ ရွှေအုဌ်၊ ငွေအုဌ်၊ ကြေးအုဌ်၊ သံအုဌ် နဂါးရာဇ်အုဌ် စုစုပေါင်းထုငါးထောင်အထက်၌ 
+                    တုရင်းတောင်မှ သယ်ယူလာသော ကျောက်အုဌ်တို့ကို အုဌ်ချင်းပွတ်၍ ဆံခြည်မျှင်မျှ ထိုးမပေါက်နိုင်အောင် ခင်းကြရသည်။ လူမင်း၊ နတ်မင်း
+                    ပြည်သူပြည်သားတို့ပူဇော်ကြသော၊ အထူးထူးသောရတနာတို့နှင့် ဓါတ်တော်တို့ကို အပြည့်အနှက်ဖြန့်ကြဲလျှက် ဌာပနာသွင်း ပူဇော်ခဲ့ပါသည်။တာဝတိံသာနတ်
+                    ပြည်မှ စူဠာမဏီစေတီတော်နှင့်တူအောင် စီရင်အားထုတ်ခဲ့ပါသည်။ ဇမ္ဗောနဒရွှေဖြင့်ပြီးသော ဘုံကိုးဆင့်ရှိသော ရွှေထီးတော် တင်လေသည်။ 
+                    စေတီတော်ကြီးအား သက္ကရာဇ် (၄၅၁)ခုနှစ် တန်ဆောင်မုန်းလဆန်း (၁၃)ရက်တွင် စတင်တည်ဆောက်ခဲ့ရာ သက္ကရာဇ် (၄၅၂) ခုနှစ် 
+                    ကဆုန်လပြည့်နေ့ တွင်ပြီးသည်။ ကာလအားဖြင့် (၆)လ (၃)ရက်သာ ကြာမြင့်ပါသည်။</span>
+                </p>
+                   <br><br><br><br>   <br>
+                <div class="features-grid">
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/8KEWAC9AEP4?si=BK94xTo7Fj8cLJi9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">ညောင်ဦး‌ရွှေစည်းခုံဘုရားသမိုင်း</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/zuX3WVLejyg?si=gYuUDNOLi--5YQfv&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">အံဖွယ်၁၈ပါး</p>
+                    </div>
+                    
+                </div>
+                
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ကင်းဝန်မင်းကြီးက စပ်ဆို ပူဇော်ခဲ့သော အံ့ကိုးပါးနှင့် ပြည့်စုံတော်မူသည့် ရွှေစည်းခုံဘုရားသည် မြန်မာနိုင်ငံ၊ 
+                    မန္တလေးတိုင်းဒေသကြီး၊ ပုဂံမြို့ဟောင်း၏ အရှေ့မြောက်ဘက် လေးမိုင်ခန့် ဝေးသော ညောင်ဦးမြို့တွင် တည်ရှိသည်။ 
+                    ညောင်ဦးမြို့ဈေး၏ အနောက်ဘက်မိုင်ဝက်ခန့်အကွာ သဲစည်းခုံပေါ်တွင် တည်ထားသဖြင့် ရွှေစည်းခုံဘုရားဟု 
+                    တွင်ခဲ့သည်။</span>
+                </p>
+                 <br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.8610924128575!2d94.88890187925763!3d21.195352030206145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5fab4ae38bc97%3A0xdd03aab2c05044c9!2sShwezigon%20Pagoda!5e1!3m2!1sen!2smm!4v1768469684206!5m2!1sen!2smm" width="860" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+<!-------Arnanda History-------------->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Arnanda Pagoda History</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda2.webp" alt="Detail Image" >
+                
+                   <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အာနန္ဒာဘုရားကို ပုဂံခေတ် ကျန်စစ်သားမင်း(1084–1113)လက်ထက် AD(1090) တွင် တည်ထားတော်မူခဲ့သည်။ ကျန်စစ်သား မင်းလက်ထက်တွင် 
+                    ဟိမဝန္တာတောရှိ နန္ဒမူလှိုဏ်ဂူမှ ရဟန္တာများ ပုဂံပြည်သို့ ကြွရောက်တော်မူလာကြသည်။ ထိုရဟန္တာအရှင်သူမြတ်များ၏မိန့်ကြားချက်အတိုင်း နန္ဒမူလှိုဏ်ဂူကို
+                    သဘောကျကာ နန္ဒမူလှိုဏ်ဂူကဲ့သို့ အာနန္ဒာစေတီတော်ကို တည်ထားတော်မူစေခဲ့ပါသည်။  အာနန္ဒာစေတီသည် ဂူပုထိုး(Temple) ပုံစံဖြင့် တည်ထားတော်မူ
+                    သောစေတီတော်ဖြစ်ပါသည်။ အလျား(၁၆၈)ပေမြင့် ပြီး၊ အနံတစ်ဖက်လျှင်(၂၈၉)ပေ ရှိသည်။ အာနန္ဒာစေတီတော်တွင် ဘုရားဆင်းတုတော်၊ ဓာတ်တော်၊ 
+                    မွေတော်များနှင့် ရွှေ၊ ငွေ၊ ကျောက်သံပတ္တမြားများထည့်သွင်းကာ ဌာပနာထားသည်။</span>
+                </p>
+                   <br><br><br>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda3.webp">
+                   <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အာနန္ဒာစေတီတော်ပရဝုဏ် အတွင်း အရှေ့၊ အနောက်၊ တောင်၊ မြောက် အရပ်လေးမျက်နှာတွင် မုခ်ဦး တစ်ခုစီဖြင့် မုခ်ဦး(၄)ခုရှိသည်။ အလယ်မဏ္ဍိုင် 
+                    အရပ်လေးမျက်နှာတွင် ပွင့်တော်မူပြီးသော ဘုရားလေးဆူအား ရည်မှန်းကာ ဘုရားလေးဆူကို တည်ထား သည်။ ဘုရားတစ်ဆူလျှင် (၁၈)တောင်မြင့်သည်။
+                    မြောက်ဘက်အရပ်တွင် ကကုသန်ဘုရား၊ အရှေ့ဘက်တွင် ကောဏဂုံ၊ တောင်ဘက်တွင် ကဿ     ပ၊ အနောက်ဘက်တွင် ဂေါတမဘုရားဟူ၍ 
+                    ဗုဒ္ဓရပ်တော်မူ ရုပ်ပွားတော် (၄)ဆူ တည်ရှိပါသည်။ထိုရုပ်ပွားတော်များအနက် တောင်နှင့် မြောက်ဘက်ရုပ်ပွားတော်နှစ် ဆူသည်သာ ပုဂံခေတ်လက်ရာ ကျန်ရှိသည်။ 
+                    ရုပ်ပွားတော်များကို အလင်းရောင်ရရှိရန်အတွက် အပေါက်များ ဖောက်ထားသဖြင့် ရုပ်ပွားတော်များကို ရှင်းရှင်းလင်းလင်းဖူးမြင်နိုင်ပါသည်။ ရုပ်ပွားတော်များကို 
+                    အတွင်းပတ်လမ်း၊ အပြင်ပတ်လမ်းဖြင့် ကာရံထားသည်။ ပတ်လမ်းနှစ်ထပ်လုံးတွင် ဗုဒ္ဓဝင်ကျောက်ဆစ် ပန်းတမော့ရုပ်တုများ ထည့်ကပ် ထားသည်။ မုခ်ဦးမှ
+                    တံခါးများပိတ်ထားပါက ဘုရား အတွင်းပိုင်းလင်းနေအောင် ဆောင်ရွက်ထားသည့်အနုပညာမှာ လက်ရာမြောက် လှပါသည်။ အတွင်းပတ်လမ်းတ 
+                    လျှောက်တစ်နေရာမှ တစ်နေရာသို့ကူး သည့်နေရာများတွင် တံတားခုံများဖြင့် ဆက်သွယ်ထားသည်။ ထိုတံတားခုံများ ကို သစ်တစ်ခုမပါ 
+                    သံတစ်ချောင်းမပါဘဲ အုတ်များဖြင့်ဆက်၍ ထားသည်မှာ လက်ရာ မြောက်လွန်းလှသည့် မြန်မာ့ ဗိသုကာလက်ရာဖြစ်သည်။</span>
+                </p>
+                   <br><br><br><br><br><br><br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda4.webp" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda5.webp" style="width: 160px; height: 200px;">
+                     
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda6.webp" style="width: 160px; height: 200px;">
+                   
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda7.webp" style="width: 160px; height: 200px;">
+                
+                    </div>
+                </div>
+                   <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အာနန္ဒာဘုရား၏အတွင်း နံရံပတ်လည်တွင်ဗုဒ္ဓဝင်ဆိုင်ရာ ကျောက်ဆင်းတုတော်များ၊ နံရံဆေးရေးပန်းချီ များဖြင့် အလှဆင်ထားသည်။ ယခုအခါ 
+                    ခေတ်ကာလကြာမြင့်လာသည်နှင့်အမျှ သဘာဝဘေးအန္တရာယ်များကြောင့်လည်း ကောင်း၊ လူတို့၏တန်ဖိုးမထား ဖျက်ဆီး မှုများကြောင့်လည်းကောင်း 
+                    အချို့နေရာ များတွင်သာ နံရံဆေးရေးပန်းချီနှင့်မှင်စာ များကိုမြင်တွေ့နိုင်တော့သည်။ ကျောက် ဖြင့်ထုလုပ်ထားသော ရှင်အရဟံရုပ်ထု နှင့်ကျန်စစ်သား
+                    မင်းကြီး၏ရုပ်ထုကို ယနေ့တိုင် တွေ့မြင်နိုင်သည်။ အာနန္ဒာစေတီတော်၏ အပြင် ဘက်အောက်ခြေပတ်လည်နှင့် အထက် ပစ္စယံများတွင် စဉ့်ကွင်းများဖြင့် 
+                    ပြုလုပ်ထားသည့် နတ်၊ ဗြဟ္မာအပေါင်းတို့ မြတ်စွာဘုရားရှင်အား လာရောက်ဖူး မြော်နေပုံ၊ မာရ်နတ်စစ်သည်များက မြတ်စွာဘုရားရှင်အား စစ်တိုက်ရန်လာ 
+                    ကြပုံ၊(၅၅၀) ဇာတ်နိပါတ်ပုံတော်များဖြင့် အလှဆင် ထားသည်။ ပုံတော်စုစုပေါင်း (၁၄၇၂)ခုရှိသည်။ အထက်ကွမ်းတောင် လှိုဏ်ဂူများတွင်
+                    ဘုရားဆင်းတုတော် (၂၀)ဆူထားရှိပြီး မုခ်ဦးထွက်ထောင့်၏ အထက်မုခ်ဦးတွင် ခြင်္သေ့ရုပ်(၁၄၈)၊ နတ်ရုပ်(၂၈)၊ စေတီရံ(၂၄)ဆူတည်ရှိသည်။</span>
+                </p>
+                   <br><br><br><br><br><br><br><br>
+                
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda9.webp" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda10.webp" style="width: 160px; height: 200px;">
+                     
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda11.webp" style="width: 160px; height: 200px;">
+                   
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda12.webp" style="width: 160px; height: 200px;">
+                
+                    </div>
+                </div>
+       
+               <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အောက်ခံနှင့်အထက်ပစ္စယံအဆင့် ဆင့်စေတီကွမ်းတောင်များသည် တစ်ခု နှင့်တစ်ခု ညီညာစွာယှက်စပ်နေသည့် အတွက်အချိုးအစားပြေပြစ်လှ သည် 
+                    ကိုလည်းတွေ့မြင်နိုင်သည်။ ပုဂံတွင်ရှိ သောစေတီပုထိုးများထဲတွင် အာနန္ဒာ စေတီတော်သည် လက်ရာအမြောက် ဆုံး၊ အနုအစိတ်ဆုံးဘုရားအဖြစ်နာမည်ကြီး
+                    ကျော်ကြားသည်။ အာနန္ဒဘုရားပွဲကို နှစ်စဉ် ပြာသိုလပြည့်နေ့မှ ပြာသိုလကွယ်နေ့အထိ ရက်သတ္တ(၂)ပတ်ကြာ ကျင်းပလေ့ ရှိကြသည်။ ဘုရားပွဲတော်အတွင်း 
+                    အနယ်နယ်အရပ်ရပ်မှ ဘုရားဖူးခရီးသည်များ လာရောက်ကြသကဲ့သို့ ဈေးသည်များကလည်း ဒေသထွက်ကုန်များကို ရောင်းချကြသည်။ </span>
+                </p>
+                   <br><br><br>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Arnanda%20pagoda8.webp">
+                    <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အာနန္ဒာဘုရားသည် မြန်မာနိုင်ငံ၊ မန္တလေးတိုင်းဒေသကြီး၊ ပုဂံတွင် တည်ရှိသည်။ စေတီပုထိုးအမှတ်မှာ ၂၁၇၁ ဖြစ်သည်။
+                    အာနန္ဒာစေတီကို ပုဂံခေတ် ကျန်စစ်သားမင်းလက်ထက် (အေဒီ ၁၀၉၀) တွင် ဆောက်လုပ်ခဲ့သည်။ 
+                    ကျန်စစ်သားမင်းလက်ထက်တွင် ဟိမဝန္တာ နန္ဒမူလိုဏ်ဂူမှ ရဟန္တာများ ကြွရောက်လာသည်။ ထိုရဟန္တာအရှင်သူမြတ်များ၏ 
+                    ပြောပြချက်ကြောင့် နန္ဒမူလိုဏ်ဂူကို သဘောကျကာ နန္ဒမူလိုဏ်ဂူကဲ့သို့ အာနန္ဒာစေတီကို တည်တော်မူသည်။ ပုဂံပြည့်ရှင် 
+                    ကျန်စစ်သားမင်း၏ ကောင်းမှုတော်ဖြစ်သော အာနန္ဒာဘုရားသည် ပုဂံဘုရားများအနက် အလွန်တရာ အချိုးအစားကျန 
+                    လှပတင့်တယ်၍ ချီးကျူးဖွယ် အကောင်းဆုံးသော ဘုရားတစ်ဆူ ဖြစ်သည်။ ရှေးမြန်မာ့ဗိသုကာပညာ၏ 
+                    အပြောင်မြောက်ဆုံးသော လက်ရာကို အာနန္ဒာဘုရား၌ တွေ့ရသည်။ ထိုဘုရားသည် စေတီဘုရားမဟုတ် 
+                    ဂူဘုရားဖြစ်သည်။ ပုဂံမြို့ သရပါတံခါး၏ အရှေ့ဘက်အနီး၌ တည်ရှိလေသည်။ (အနုမှာ အာနန္ဒာ၊ ထုမှာဓမ္မရံဟု 
+                    မှတ်တမ်းတင်ထားကြသည်။)</span>
+                </p>
+                       <br><br><br><br>
+                <div class="features-grid">
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/I0nsK_xLg9c?si=egfczuGIENp9PtVx&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">လောကနန္ဒာဘုရားရဲ့ ထူးခြားချက် (၅)ချက်</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/pFxs4KWzuok?si=9DtYh6swSW96UI-e&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">အာနန္ဒာဘုရားသမိုင်း-ပုဂံ</p>
+                    </div>
+                    
+                </div>
+                   <br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.446601921482!2d94.86500207503555!3d21.170871880514216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5e51c276be127%3A0x392ae5db3a1149b9!2sAnanda%20Temple!5e1!3m2!1sen!2smm!4v1768470070654!5m2!1sen!2smm" width="860" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+
+
+<!-------BuBhayar History-------------->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Bupaya History</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda2.webp" alt="Detail Image" >
+                
+                
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ပုဂံမင်းဆက်များသည် သရေခေတ္တရာမင်းဆက်မှ ဆင်းသက်လာခြင်းဖြစ်သည်။ သရေ ခေတ္တရာမင်းဆက်သည်လည်း တကောင်းမင်းဆက်မှ ဆင်းသက်လာသည်ဟု သိရှိရပါသည်။ 
+                    သရေခေတ္တရာပြည်ကြီးသည် မင်းဆက်ပေါင်း (၂၇)ဆက် ထီးနန်းစိုးစံခဲ့ကြသည်။ (၂၇)ဆက်‌မြောက်မင်းဖြစ်သော နဂရဆိန္ဒ နန်းတက်သည့်အခါ တိုင်းပြည်မငြိမ်မသက်ဖြစ်ပြီး သရေ 
+                    ခေတ္တရာပြည်ကြီး ပျက်သုဉ်းခဲ့ရသည်။ သက္ကရာဇ် (၁၆)ခုနှစ်တွင် သရေခေတ္တရာပြည်ရှိ ပျူတို့ သည် ဧရာဝတီမြစ်ကိုဖြတ်ကူးပြီး တောင်ညိုအရပ်တွင် (၃)နှစ်၊ ပန်းတောင်းအရပ်တွင် 
+                    (၆) နှစ်၊ မင်းတုန်းအရပ်တွင် (၃)နှစ် ယာယီထီးနန်းစိုက်ပြီး ရွှေ့ပြောင်းနေထိုင်လာခဲ့ကြသည်။</span>
+                </p>
+               <br><br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    မင်းတုန်းအရပ်မှ ပုဂံဒေသသို့ ရောက်သောအခါ (၁၃)နှစ်ကြာခဲ့သဖြင့် သက္ကရာဇ် (၂၉)ခုနှစ်တွင် ယုန်လွှတ်ကျွန်းအရပ်၌ ရွာကြီး(၁၉)ရွာ စုစည်း၍ အရိမဒ္ဒနအမည်ဖြင့် မြို့ပြနေပြည်တော်
+                    တည်ထောင်အုပ်ချုပ်ခဲ့ပေသည်။ ထိုသမုဒ္ဒရာဇ်မင်းလက်ထက်တွင် ကျား၊ရှူး၊ ဘူး၊ ဝက်၊ ငှက်ကြီးဟူသော ရန်သူ(၅)ဦးတို့သည် အထူးနှိပ်စက်၍ တိုင်းပြည်မြို့ရွာ လွန်စွာလှုပ်ရှားလျက် 
+                    ကြမ်းတမ်းဆိုးရွားစွာ လူသတ္တဝါများကို တိုက်ခိုက်ဖျက်စီးနေသည်။ ဘုရင်သမုဒ္ဒရာဇ်မင်းကိုယ်တိုင် မနှိမ်နှင်းနိုင်ဘဲ စိတ်ဆင်းရဲနေရသည်မှာ (၁၂)နှစ်ကြာခဲ့သည်။ ထိုအချိန်ကာလတွင် 
+                    ရန်သူကြီး(၅)ဦးအား နှိမ်နှင်းနိုင်မည့် လုလင်တစ်ဦး ပေါ်ပေါက်လာခဲ့ ပါသည်။ ထိုလုလင်၏အမည်မှာ ပျူစောထီးပင်ဖြစ်ပါသည်။ ပျူစောထီး၏ ဇာတိမှာ တကောင်းမြို့ဟောင်း ဖြစ်ပါသည်။ 
+                    ပျူစောထီးမင်းအကြောင်းကို ပြောရမည်ဆိုပါက သမိုင်း မှတ်တမ်းများတွင် (၃)မျိုးကွဲပြားလျက်ရှိနေပါသည်။</p>
+                    <br><br><br><br>
+                    <ul> (က)   တကောင်းနန်းရိုး၊ သတိုးမဟာရာဇာမင်း၏ အနွယ်ဖြစ်သော သတိုးအာဒိစ္စမင်း နှင့် မိဖုရားတို့မှ ဖွားမြင်သည်ဟုဆိုသည်။</ul>
+                    <ul> (ခ)    ပျူမျိုးရိုးမှဆင်းသက်၍ မင်းအဖြစ်ရရှိခဲ့သည်ဟုလည်း ဆိုကြသည်။</ul>
+                    <ul> (ဂ)    ကာလနဂါးမင်း၏သားတော် နဂါးကြောင်မင်း၏ သမီးတော် ဇံသီးအမည်ရှိ နဂါးမနှင့် နေနတ်သားတို့ သင့်မြတ်ပြီး နဂါးမျိုးနွယ်ဥမှ ပေါက်ဖွားသောလုလင်ဖြစ်သည်ဟုလည်းဆိုသည်။</ul></span>
+                <br>
+                 <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda3.webp">
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    မည်သို့ပင်ဆိုစေကာမူ တကောင်းမျိုးရိုးအစဉ်အဆက်မှ ဆင်းသက်လာသော ပျူလူမျိုး အနွယ်ဖြစ်သည်ကို တွေ့ရှိရသဖြင့် သတိုးအာဒိစ္စရာဇာမင်းနှင့် ကြင်ယာတော်မိဖုရားတို့မှ မွေးဖွားလာသည်ကို 
+                    ယုံကြည်ရမည်ဖြစ်ပါသည်။ ပျူစောထီးအား မွေးဖွားပြီး (၇)နှစ်သား အရွယ်တွင် ဆရာရသေ့ထံ အပ်နှံပညာသင်ယူစေခဲ့ပါသည်။ ဆရာရသေ့သည် စောထီး၏ ဇာတာကို စစ်ဆေးကြည့်ရာ အကြေအရပ်တွင်
+                    မင်းဖြစ်မည်ကိုသိသဖြင့် မင်းတစ်ပါးတွင် တတ်အပ်သော ပညာရပ်မျိုးစုံကို သင်ကြားပေးခဲ့သည်။ မင်းထီးမှာ လေးအတတ်ကို အထူး ကျွမ်းကျင်စွာ တတ်မြောက်ပေသည်။ (၁၆)နှစ်သားအရွယ်သို့ 
+                    ရောက်သောအခါ ဆရာရသေ့ နှင့်မိဘများကို ခွင့်ပန်ပြီး အကြေအောက်အရပ်သို့ စုန်ဆင်းလာခဲ့လေသည်။ မိဘများက လည်း မင်းထီးကို လေးမြှားရတနာအပ်နှင်းလိုက်သည်။ ထိုအချိန်၌ သမုဒ္ဒရာဇ်မင်းကြီး
+                    စိုးစံနေသော ရွာကြီး (၁၉)ရွာအနက် တစ်ရွာအပါအဝင်ဖြစ်သည့် မြေခဲတွင်းရွာသို့ ရောက်ရှိခဲ့ သည်။</span>
+                </p><br><br><br><br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    မြေခဲတွင်းရွာတွင်ရှိသော ပျူအိုလင်မယားထံတွင် လုပ်ကျွေးပြုစုလျက် မိမိကျွမ်းကျင် တတ်မြောက်သော လေးမြှားအတတ်ပညာကို အထူးလေ့ကျင့်ပြီးနောက် ရန်သူကြီး(၅)မျိုး အား သွားရောက်နှိမ်နှင်းရန် 
+                    ခွင့်တောင်းခံခဲ့သည်။ ရန်သူကြီး(၅)မျိုးအား လေးမြှားအတတ် ဖြင့် နှိမ်နှင်းအောင်မြင်ခဲ့သည်ကို ဘုရင်သမုဒ္ဒရာဇ်မင်းကြီး ကြားသိသောအခါ စောထီး၏ အမျိုးအနွယ်ကို စစ်ဆေးသည်။ တကောင်းမှလာသော
+                    မင်းမျိုးရိုးလည်းဖြစ်ခြင်း၊ လေးမြှားအတတ်၊ဗေဒင်၊ ပိဋကတ်အတတ်တို့တွင် လိမ်မာတတ်ကျွမ်းသည်ကို သိရသဖြင့် သမီးတော် သီရိစန္ဒာဒေဝီနှင့် ထိမ်းမြားပေးပြီး အိမ်ရှေ့ဥပရာဇာအဖြစ် အပ်နှင်းတော်မူသည်။ 
+                    (၃)နှစ် အကြာတွင် သမုဒ္ဒရာဇ်မင်းကြီး နတ်ရွာစံတော်မူသည်။ ပျူစောထီးသည် ထီးနန်းအုပ်ချုပ် မင်းလုပ်တော်မမူသေးဘဲ ဆရာရသေ့ကို ထီးနန်းတင်ပေးခဲ့သည်။ ရသေ့ကြောင်မင်းဟု အမည်ခံလျက် 
+                    ထီးနန်းစည်းစိမ်(၁၅)နှစ် စိုးစံခဲ့ပြီး နတ်ရွာစံ အနိစ္စရောက်ခဲ့သည်။ </span>
+                </p><br><br><br><br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda4.webp" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda5.webp" style="width: 160px; height: 200px;">
+                     
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda6.webp" style="width: 160px; height: 200px;">
+                   
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/bu%20pagoda7.webp" style="width: 160px; height: 200px;">
+                
+                    </div>
+                </div>
+                <br>
+               <p style="text-align: justify;"><span style="padding-left: 60px;">
+                      ရသေ့ကြောင်မင်း နတ်ရွာစံပြီးနောက် သက္ကရာဇ် (၈၉)ခုနှစ်၊ အေဒီ ၁၆၇ခုနှစ်တွင် အိမ်ရှေ့ဥပရာဇာဖြစ်သော ပျူစောထီးသည် ပုဂံမင်းဆက်၏ တတိယမြောက်မင်းအဖြစ် စိုးစံခဲ့ပေသည်။ 
+                      နန်းစံသက်(၃)နှစ်ရှိပြီး သက္ကရာဇ်(၉၂)ခုနှစ်သို့ရောက်သောအခါ သမုဒ္ဒရာဇ် မင်းကြီးလက်ထက်တွင် နှိမ်နှင်းအောင်နိုင်ခဲ့သော ကျား၊ ရှူး၊ ဘူး၊ ဝက်၊ ငှက်ဟူသော ရန်သူ (၅)ဦးတို့ကို 
+                      ဖျက်စီးရာအရပ်တွင် –
+                    </p>
+                    <br><br>
+
+                    <ul> (၁) ကျားသတ်ဘုရား ၊</ul>
+                    <ul> (၂) ရှူးပျံဘုရား၊</ul>
+                    <ul> (၃) ဗူးဘုရား၊</ul>
+                    <ul> (၄) ဝက်သတ်ဘုရား၊</ul>
+                    <ul> (၅) ငှက်ပစ်တောင်ဘုရား၊</ul>
+                    <ul> (၆) လေနှင်ဘုရား၊</ul>
+                    <ul> (၇) မြှားသဘုရား၊</ul>
+                    <ul> (၈) သမှးဝှက်ဘုရား၊</ul>
+                    <ul> (၃) ငှက်တောင်ပစ်ဘုရား ဟူ၍ ကိုးဆူ ကိုးရပ် ကိုးဌာနတို့တွင် ဘုရားစေတီပုထိုးများ တည်ထား ကိုးကွယ်ခဲ့ပါသည်။</ul></span>
+                <br>
+                 <p style="text-align: justify;"><span style="padding-left: 60px;">
+                     ဗူးဘုရားတည်ထားကိုးကွယ်ခဲ့သော အရပ်ကား ပထမပေါက်ပင်စသော နိမိတ်(၅)ပါး တည်ရာအရပ်၊ ဒုတိယ 
+                     ဘူးပင်ပေါက်ရာအရပ်ဖြစ်ကြောင်း တွေ့ရှိရမည်ဖြစ်ပါသည်။ ရွှေနန်း တော်သွင်းဘုရားစဉ်အလင်္ကာတွင်လည်း “ဇမ္ဗူကျော်ကြား ဗူးဘုရားသည် 
+                     ထင်ရှားအနှံ့ သိသည်ဘုရား” ဟူ၍လည်း ရေးသားစပ်ဆိုထားပါသည်။</span>
+                </p>
+                <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ဗူးဘုရားသည် မြန်မာနိုင်ငံ၊ မန္တလေးတိုင်းဒေသကြီး၊ ပုဂံမြို့အနီး ဧရာဝတီမြစ် ကမ်းနဖူး၌ တည်ရှိပြီး မြစ်ကမ်းစပ်တွင် 
+                    ခရုပတ်သဖွယ် စိန်တန်းနှစ်သွယ်နှင့် တည်ဆောက်ထားသည်။ စေတီပုထိုးအမှတ်မှာ ၁၆၅၇/၉၆၁ ဖြစ်သည်။</span>
+                </p>
+                <br>
+                <div class="features-grid">
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/zOPKGeizbOw?si=vAlTK3qu9kneO3NC&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">သုဝဏ္ဏမြို့ဦးစေတီ(ဗူးဘုရား)</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/m9BTIdPVUH8?si=ypeL5s96xpVHDhVd&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">ဒဏ္ဍာရီဆန်ဆန် ရာဇဝင်များနှင့် ထင်ရှားသည့် ပုဂံမြေမှ ဗူးဘုရား</p>
+                    </div>
+                    
+                </div>
+             
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.316844159837!2d94.85523587503572!3d21.176299380510148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5e5042d54a833%3A0xd1f25b476ae9f123!2sBupaya!5e1!3m2!1sen!2smm!4v1768561000571!5m2!1sen!2smm" width="870" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+               
+            </div>
+        </div>
+    </div>
+
+
+    <!-------Thant Kyi Taung History-------------->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Thant Kyi Taung Pagoda History</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung1.jpg" alt="Detail Image">
+                
+                
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တန့်ကြည့်တောင်စေတီသည် မြန်မာနိုင်ငံ၊ မကွေးတိုင်းဒေသကြီး၊ ပခုက္ကူခရိုင်၊ တန့်ကြည့်တောင်ပေါ်တွင် တည်ရှိသည့် 
+                    စေတီတစ်ဆူဖြစ်သည်။ ပုဂံဘုရားစုများတွင် ပါဝင်ပြီး စွယ်တော် လေးဆူအနက် တစ်ဆူ အပါအဝင်ဖြစ်သည်။</span>
+                </p>
+               <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ပုဂံဒေသတွင် အနော်ရထာမင်း ၏ကောင်းမှု မြတ်စွယ်တော် လေးဆူမှာ-
+                    <ul> (၁)   ရွှေစည်းခုံစေတီတော်(ပုဂံ)</ul>
+                    <ul> (၂)   တန့်ကြည့်တောင်စေတီ</ul>
+                    <ul> (၂)   လောကနန္ဒာစေတီ</ul>
+                    <ul> (၃)  တုရင်းတောင်စေတီ(ပုဂံ)</ul></span>
+                </p>
+                 <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung2.jpg">
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    မြတ်စွာဘုရားသည် ဝါတော်(၃၅)ဝါတွင် ညီတော်အာနန္ဒာအား ခေါ်တော်မူ၍ ရတနာဓရဟိရညတောင် (ယခု တန့်ကြည့်တောင်) 
+                    ထိပ်သို့ ကြွတော်မူဖူး၏။ ထို့နောက် ငါ ဘုရား ပရိနိဗ္ဗာန်စံဝင်ပြီး နှစ်ပေါင်း (၆၅)နှစ်အရောက်တွင် ဤမြစ်တစ်ဖက်ကမ်း၌ အရိမဒ္ဒနပေါက္ကံ 
+                    (ပုဂံပြည်) ပေါ်ပေါက်မည့်အကြောင်း ဗျာဒိတ်ပေးခဲ့သည်။ ထိုအချိန် မြတ်စွာဘုရားအား မဟာပါလဘီလူးသည် နေပူခမည် စိုး၍ ကြာသုံးရွက်ဖြင့် 
+                    မိုးခဲ့ရာ ထိုဘီလူးသည်လည်း ယင်းပေါက္ကံပြည်တွင် မင်းသုံးဆက် ဖြစ်လတ္တံ့ဟု ဗျာဒိတ်တော်ခြွေခဲ့လေသည်။</span>
+                </p>
+                <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    မြေခဲတွင်းရွာတွင်ရှိသော ပျူအိုလင်မယားထံတွင် လုပ်ကျွေးပြုစုလျက် မိမိကျွမ်းကျင် တတ်မြောက်သော 
+                    လေးမြှားအတတ်ပညာကို အထူးလေ့ကျင့်ပြီးနောက် ရန်သူကြီး(၅)မျိုး အား သွားရောက်နှိမ်နှင်းရန် 
+                    ခွင့်တောင်းခံခဲ့သည်။ ရန်သူကြီး(၅)မျိုးအား လေးမြှားအတတ် ဖြင့် နှိမ်နှင်းအောင်မြင်ခဲ့သည်ကို ဘုရင်သမုဒ္ဒရာဇ်
+                    မင်းကြီး ကြားသိသောအခါ စောထီး၏ အမျိုးအနွယ်ကို စစ်ဆေးသည်။ တကောင်းမှလာသော
+                    မင်းမျိုးရိုးလည်းဖြစ်ခြင်း၊ လေးမြှားအတတ်၊ဗေဒင်၊ ပိဋကတ်အတတ်တို့တွင် လိမ်မာတတ်ကျွမ်းသည်ကို သိရသဖြင့်
+                    သမီးတော် သီရိစန္ဒာဒေဝီနှင့် ထိမ်းမြားပေးပြီး အိမ်ရှေ့ဥပရာဇာအဖြစ် အပ်နှင်းတော်မူသည်။ 
+                    (၃)နှစ် အကြာတွင် သမုဒ္ဒရာဇ်မင်းကြီး နတ်ရွာစံတော်မူသည်။ ပျူစောထီးသည် ထီးနန်းအုပ်ချုပ် 
+                    မင်းလုပ်တော်မမူသေးဘဲ ဆရာရသေ့ကို ထီးနန်းတင်ပေးခဲ့သည်။ ရသေ့ကြောင်မင်းဟု အမည်ခံလျက် 
+                    ထီးနန်းစည်းစိမ်(၁၅)နှစ် စိုးစံခဲ့ပြီး နတ်ရွာစံ အနိစ္စရောက်ခဲ့သည်။ </span>
+                </p>
+                <br><br><br><br><br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung2.jpg" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung3.jpg" style="width: 160px; height: 200px;">
+                     
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung4.jpg" style="width: 160px; height: 200px;">
+                   
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung5.jpg" style="width: 160px; height: 200px;">
+                
+                    </div>
+                </div>
+                <br><br>
+               <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    သာသနာ သက္ကရာဇ် ၂၁၈-ခုနှစ်တွင် အိန္ဒိယနိုင်ငံ ပါဋလိပုတ် (ယခု ပဋနာ)မြို့၌ သီရိဓမ္မာသောကမင်းကြီးသည် 
+                    မြို့ပေါင်း ရှစ်သောင်းလေးထောင်တို့၌ ရှစ်သောင်းလေးထောင်သော စေတီတို့ဖြင့် ကျောင်းတိုက်ကြီးပေါင်း 
+                    တစ်သောင်းလေးထောင် တည်ဆောက်စဉ်က မုဋ္ဌောစေတီများ တည်ထားခဲ့ရာ သံတောင် ငါးတောင်၊ 
+                    ထီးငါးဆင့်ရှိသော စေတီတော်မြတ်တို့ ဟိရညတောင် ဗျာဒိတ်တော်အရ တည်ခဲ့သည်။ ထိုတည်ရာ၌ 
+                    မင်းကြီး၏ သေနာပတိ ဓမ္မာနုဂ္ဂဟအမတ်ကိုယ်တိုင် ကြပ်မတ်၍ တည်တော်မူသည်။။</ul></span>
+                </p>
+                <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တန့်ကြည့်တောင် စေတီကို အေဒီ (၁၀၅၉) တွင် အနော်ရထာမင်း တည်ခဲ့သည်။ အနော်ရထာမင်းသည် သီဟိုဠ် ၌ 
+                    ဘုရင်ဝိဇယဘာဟု(၁) ဆက်သလိုက်သော စွယ်တော်ကို ထပ်မံပွား၍ တန့်ကြည့်တောင် ပေါ်ရှိ 
+                    သီရိဓမ္မာသောကမင်းတည်ခဲ့သည့် စေတီကို ပြုပြင်မွမ်းမံကာ စွယ်တော်ပွားကို ဌာပနာခဲ့သည်။</span>
+                </p>
+                <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တန့်ကြည့်တောင် စေတီကို အောက်ခြေတွင် ပစ္စယာ အဆင့်ဆင့်ခံ၍ သပိတ်မှောက် ခေါင်းလောင်းပုံ၊ ခေါင်းလောင်းပုံ
+                    တွင် ပန်းဆွဲများ တန်ဆာဆင်ထားသည့် ရစ်စည်း၊ ဖောင်းရစ် အဆင့်ဆင့်၊ ဖောင်းရစ်များ အထက်တွင် ကြာမှောက်၊
+                    ကြာလန်၊ ငှက်ပျောဖူး၊ ထီးတော်တို့ဖြင့် တည်ဆောက်ထားသည်။</span>
+                </p>
+                <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တန့်ကြည့်တောင် စေတီကို အောက်ခြေတွင် ပစ္စယာ အဆင့်ဆင့်ခံ၍ သပိတ်မှောက် ခေါင်းလောင်းပုံ၊ ခေါင်းလောင်းပုံ
+                    တွင် ပန်းဆွဲများ တန်ဆာဆင်ထားသည့် ရစ်စည်း၊ ဖောင်းရစ် အဆင့်ဆင့်၊ ဖောင်းရစ်များ အထက်တွင် ကြာမှောက်၊
+                    ကြာလန်၊ ငှက်ပျောဖူး၊ ထီးတော်တို့ဖြင့် တည်ဆောက်ထားသည်။</span>
+                </p>
+           <br><br>
+                <div class="features-grid">
+                    <div class="video-container">           
+                        <iframe width="400" height="250"
+                                src="https://www.youtube.com/embed/CgYyYKmsLYM" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <p style="font-size: 12px;text-align: center;">တန့်ကြည့်တောင်စွယ်တော်ရှင်မှ ကျောက်နဂါးကြီးသမိုင်း</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" 
+                                src="https://www.youtube.com/embed/54jU6dzPGgs" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <p style="font-size: 12px;text-align: center;">History of Tant Kyi Taung Pagoda</p>
+                    </div>
+                    
+                </div>
+                <br><br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တန့်ကြည့်တောင်စေတီသည် မြန်မာနိုင်ငံ၊ မကွေးတိုင်းဒေသကြီး၊ ပခုက္ကူခရိုင်၊ တန့်ကြည့်တောင်ပေါ်တွင် တည်ရှိသည့် 
+                    စေတီတစ်ဆူဖြစ်သည်။ ပုဂံဘုရားစုများတွင် ပါဝင်ပြီး စွယ်တော် လေးဆူအနက် တစ်ဆူ အပါအဝင်ဖြစ်သည်။ </span>
+                </p>
+                <br><br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.633657007938!2d96.08013597505727!3d21.903952779973455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb734898f663a1%3A0x7e0d0f4122467ff5!2z4YCQ4YCU4YC64YC34YCA4YC84YCK4YC64YCQ4YCx4YCs4YCE4YC64YCG4YCv4YCQ4YCx4YCs4YCE4YC64YC44YCV4YC84YCK4YC64YC34YCY4YCv4YCb4YCs4YC4!5e1!3m2!1sen!2smm!4v1768560719607!5m2!1sen!2smm" width="870" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-------Lawka Nanda History-------------->
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Lawka Nanda Pagoda History/h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda1.png" alt="Detail Image" >
+                
+                
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    လောကနန္ဒာစေတီ(ပုဂံ) ... လောကနန္ဒာစေတီသည် မြန်မာနိုင်ငံ၊မန္တလေးတိုင်းဒေသကြီး၊ ပုဂံတွင်ရှိသော 
+                    ရှေးဟောင်းဘုရားတစ်ဆူ ဖြစ်သည်။ စေတီပုထိုးအမှတ် ၁၀၂၃/၄၁၈−က ဖြစ်သည်။ စွယ်တော်မြတ် ကိန်းဝပ်ရာ
+                    တတိယမြောက် စေတီတော်ကြီး ဖြစ်သည်။</span>
+                </p>
+                <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ကောဇာသက္ကရာဇ် ၃၉၃-ခုနှစ်တွင် ပုဂံပြည့်ရှင် အနုရုဒ္ဓါခေါ် အနော်ရထာမင်းကြီးသည် သိကြားမင်းပေးသော 
+                    အိမ်မက်အရ သီဟိုဠ်ကျွန်းသို့ သံတမန်စေလွှတ်၍ ဗုဒ္ဓမြတ်စွယ်တော်ကို ပင့်တော်မူသည်။ မင်းကြီးသည် သီရိပစ္စယာ
+                    ကျောက်စကားအရပ် သင်္ဘောဆိပ်တွင် လည်ပင်း တိုင်အောင် ရေသို့ဆင်း၍ စွယ်တော်ကို ကြိုတော်မူပြီး 
+                    ရတနာအတိပြီးသော ပြာသာဒ်ဖြင့် ထားကာ နန်းတော်၌ ကိုးကွယ်ဆည်းကပ်တော်မူခဲ့ပါသည်။ </span>
+                </p>
+                <br><br>
+                 <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda5.png">
+                <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    ရှင်အရဟံမထေရ်မြတ်သည် စွယ်တော်မြတ်ကို နန်းတော်မှာထား၍ ပူဇော်သည်ထက် လူ၊ နတ်၊ ဗြဟ္မာ 
+                    သတ္တဝါတို့၏အကျိုးငှာ စေတီတည်၍ သာသနာတော်အဓွန့်ရှည်သမျှ ပူဇော် နိုင်ရန် အကြံပေးတော်မူရာ 
+                    မင်းကြီးသည် စွယ်တော်မြတ်ကို ရတနာပန်းတောင်းတွင်ထည့်၍ ဆင်ဖြူရတနာထက်သို့တင်ကာ 
+                    “ဤစွယ်တော်ဓာတ်မြတ် ကိန်းဝပ်တော်မူလိုရာအရပ်၌ ဆင်ဖြူ ရတနာဝပ်စေသတည်း”ဟု အဓိဌာန်ပြု၍ 
+                    လွှတ်တော်မူရာ ဆင်ဖြူရတနာသည် ဇေယျဘူမိ အရပ်၌ ဝပ်လေသဖြင့် ရွှေစည်းခုံစေတီ၊ ထို့နောက် 
+                    စွယ်တော်ဓာတ်မြတ်ကိုပွား၍ ဆင်ဖြူ ရတနာဝပ်ရန် အဓိဌာန်ပြန်လေရာ ဆင်ဖြူရတနာသည် ဧရာဝတီမြစ်ကိုကူးပြီး 
+                    တန့်ကြည့်တောင်ထိပ်၌ဝပ်တော်မူ၍ တန့်ကြည့်တောင်စေတီ၊ တတိယအကြိမ်တွင် သီရိပစ္စယာကျောက်စကား အရပ် 
+                    သင်္ဘောဆိပ် အနီး၌ဝပ်၍ လောကနန္ဒာစေတီ၊ စတုတ္ထအကြိမ်တွင် ပုဂံမြို့အရှေ့ တောင်ဘက်ရှိ 
+                    တုရင်တောင်ထိပ်၌ဝပ်၍ တုရင်တောင်စေတီ၊ နောက်ဆုံးအကြိမ်တွင် ဆင်ဖြူ တော်ရတနာသည် 
+                    ကျောက်ဆည်နယ်ရှိ ပြတ်ခရွေတောင်၌ ဝပ်လေသဖြင့် ပြတ်ခရွေတောင် စေတီ စုစုပေါင်း စွယ်တော်ပွားငါးဆူ 
+                    တည်ထားခဲ့ပါသည်။ ဤသို့ဖြင့် ပုဂံပြည့်ရှင် အနုရုဒ္ဓါခေါ် အနော်ရထာမင်းကြီးသည် ကောဇာသက္ကရာဇ် ၃၉၃ – 
+                    ခုနှစ်တွင် လူ၊ နတ်၊ ဗြဟ္မာ သတ္တဝါတို့ ၏ အကျိုး၊ သာသနာတော်မြတ်၏အကျိုးကို သယ်ပိုးမည်ဟု နှလုံးပိုက်၍ 
+                    လောကနန္ဒာစေတီ တော်မြတ်ကြီးအား တည်ထားတော်မူခဲ့လေသည်။</span>
+                </p>
+            <br><br><br><br><br><br>
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda1.png" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda2.png" style="width: 160px; height: 200px;">
+                     
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda3.png" style="width: 160px; height: 200px;">
+                   
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/lawka%20Nanda4.png" style="width: 160px; height: 200px;">
+                
+                    </div>
+                </div>
+          <br>
+                <div class="features-grid">
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/DVRzPA3io84?si=6VK0eWDUh3Jp4J2B&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">လောကနန္ဒာဘုရားသမိုင်း</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/-64VlWBEWg4?si=zQ1URyDVxgsbYbPV&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p style="font-size: 12px;text-align: center;">ပုဂံမြို့လောကနန္ဒာ ဘုရားသမိုင်းအပြည့်အစုံ</p>
+                    </div>  
+                </div>
+
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    လောကနန္ဒာစွယ်တော်မြတ်စေတီတော်အား ဖူးမြော်မည်ဆိုပါက မန္တလေးတိုင်းဒေသ ကြီး၊ ညောင်ဦးခရိုင်၊ ပုဂံမြို့သစ်၊ 
+                    ညောင်ဦး – ချောက်သွားကားလမ်းမကြီး၏ အနောက် မြောက်ဘက်၊ သီရိပစ္စယာရွာ၏ အနောက်တောင်ဘက်တွင် ဖူးမြော်နိုင်ပါသည်။</span>
+                </p>
+               <br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.6323700205567!2d94.84781011050845!3d21.127217984309016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5e47dc6af19d7%3A0x6f38912a9ce68aa8!2sLawkananda%20Pagoda!5e0!3m2!1sen!2smm!4v1768461796394!5m2!1sen!2smm" width="870" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-------Thu Yin Taung History-------------->
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Thu Yin Taung Pagoda History</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung1.jpg" alt="Detail Image" >
+                
+                
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တုရင်တောင်သည် တောင်ဘက်ရှိ သက်စိုးတောင်နှင့် ဆက်စပ်နေပြီး လွန်ခဲ့သော နှစ် (၂၅) သန်းခန့်က 
+                    ဖြစ်ပေါ်ခဲ့သည့် သဲကျောက်တောင် အမျိုးအစားဖြစ်သည်။ ရွှေစည်းခုံစေတီတော်ကို တည်ခဲ့ စဉ်က တုရင်တောင်မှ 
+                    ကျောက်တုံးများ သယ်ယူခဲ့ပါသည်။</span>
+                </p>
+               <br>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    အနော်ရထာမင်းကြီးက စွယ်တော်ပွားကိုတင်ပြီး အဓိဌာန်ပြု၍ ဆင်ဖြူရတနာ စေလွှတ်ခဲ့ရာ တုရင် တောင်ထိပ်၌ 
+                    ဆင်ဖြူရတနာဝပ်တော်မူ၍ စွယ်တော်မြတ်ကို တုရင်တောင်ထိပ်၌ ဌာပနာ၍ ၁၀၆၀ ပြည့်နှစ်၊  သက္ကရာဇ် ၄၂၁ ခုနှစ်၌
+                    တည်ထားကိုးကွယ်ခဲ့သော စတုတ္ထမြောက် စွယ်တော်မြတ်စေတီတော် တစ်ဆူဖြစ်ပါသည်။ ယင်းစေတီကို 
+                    တုပ်ဝပ်တောင်ဟုတွင်စေ၏။ တုရင်တောင်သည် ပါဠိဘာသာ တုရင်္ဂမှ ဆင်းသက်လာပြီး၊ တုရင်္ဂဟူသည် 
+                    လျင်မြန်သောအနက်ကိုဟော၍ “မြင်းနှင့်တူသောတောင်”ဟု အဓိပ္ပါယ် ဖွင့်ဆိုထားပါသည်။ အနော်ရထာမင်းသည် 
+                    တုရင်တောင်စေတီကို ဖိနပ်တော်ရှစ်မြှောင့်ခံ၍ ခေါင်းလောင်း ပုံတည်ထားခဲ့သည်။ စေတီတော်အောက်ခြေတွင်  
+                    ဆင်(၃၂)ကောင်ခံခဲ့ပြီး မူလစေတီတော် ပုံစံသည် သေးသွယ်၍ အပေါ်သို့ချွန်တက်သွားသော ဖောင်းရစ်အဆင့်ဆင့်ပါရှိ
+                    သည့် ရိုးရှင်းသော စေတီပုံစံဖြစ်သည်။</span>
+                </p>
+                <br><br><br><br>
+                 <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung6.jpg">
+                 <p style="text-align: center;"><i>စေတီတော်အောက်ခြေတွင် ဆင်(၃၂)စီးခံ၍ တည်ထားခဲ့ပုံ</i></p>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    တုရင်တောင်၏ အနောက်ဘက်တွင် ကျန်စစ်သားမင်းကြီး တူးဖော်ခဲ့သော မြကန်ရှိသည်။ ယခုအခါ မြကန်ကို တမံ 
+                    အဖြစ်တည်ဆောက်ထားသည်။ ကန်တော်၏ မူလဘွဲ့အမည်မှာ “မဟာနိဗ္ဗာန လက်ဆွဲ ချီရေ (သို့) မဟာနိဗ္ဗာန် 
+                    လက်ဆွဲချီကန်”ဟု ကျောက်စာများတွင် တွေ့ရပါသည်။ ရေကန်ကြီး၏အလှကို ဖွဲ့ဆိုသော ပုဂံခေတ်ကဗျာလေးတစ်ပုဒ်ကို 
+                    မှတ်သားရဖူးပါသည်။ ယင်းကဗျာလေးမှာ –</span>
+                </p>
+                <br>
+                <p style="text-align: center;">မြကန်</p>
+                <p style="text-align: center;"><i>မြကန်သာ</i></p>
+                <p style="text-align: center;"><i>တောင်ကျချောင်းတေး</i></p>
+                <p style="text-align: center;"><i>ရေဝင်ပြေးလှည့်</i></p>
+                <p style="text-align: center;"><i>ရေအေးကြည်စွာ</i></p>
+                <p style="text-align: center;"><i>ကန်ပိုင်မာလျက်</i></p>
+                <p style="text-align: center;"><i>ကြာပေါင်းထုံထုံ</i></p>
+                <p style="text-align: center;"><i>ငှက်မျိုးစုံသည်</i></p>
+                <p style="text-align: center;"><i>တာဝတိံသာက နန္ဒာလော</i></p>
+                <p style="text-align: center;"><i>တူစွဟုတ္တာ။</i></p>
+
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    မြကန်ကို အမှီပြု၍ လယ်ယာမြေများ ဖွံ့ဖြိုးလှသဖြင့် တစ်နှစ်လျှင် သုံးသီးစားရကြောင်း မော်ကွန်း တင်ခဲ့သည်။ 
+                    ယခုအခါတွင်မူကား မိုးအလွန်ကောင်းသောနှစ်များတွင်သာ မြကန်ကို ရေဖွေးဖွေးနှင့် မြင်ရ သည်။</span>
+                </p>
+                <br>
+
+                <div class="features-grid2">
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung1.jpg" style="width: 160px; height: 200px;">
+                       
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung2.jpg" style="width: 160px; height: 200px;">
+                     
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung3.jpg" style="width: 160px; height: 200px;">
+                   
+                    </div>
+                    <div class="feature-item2">
+                        <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/thuyintaung4.jpg" style="width: 160px; height: 200px;">
+                
+                    </div>
+                </div>
+
+                <p style="text-align: center;">သာသနာတော်ထွန်ကားပြန့်ပွားမှု</p>
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                    စေတီတော်ကြီး၏ဒါယကာ အနော်ရထာမင်းကြီး နတ်ရွာစံပြီးနောက် ပုဂံမင်းအဆက်ဆက် တို့နှင့်တကွ စစ်ကိုင်း၊ 
+                    ပင်းယ၊ အင်းဝ၊ ကုန်းဘောင် မင်းအဆက်ဆက်တို့ စောင့်ထိန်းပြုပြင် ကိုးကွယ် ခဲ့ပါသည်။ တတိယအင်္ဂလိပ် မြန်မာ 
+                    စစ်ပွဲကာလနှင့် မြန်မာနိုင်ငံကို ဗြိတိသျှအစိုးရတို့ သိမ်းယူပြီး ၁၂၄၇ ခုနှစ် နောက်ပိုင်းတွင် တိုင်းပြည်နှင့်အဝှမ်း 
+                    မတည်မငြိမ်ဖြစ်ခဲ့ကြရသည်။ စေတီတော်ကြီးအား ပြုပြင် စောင့်ရှောက်မှု အားနည်းခဲ့ပါသည်။ အင်္ဂလိပ်နယ်ချဲ့
+                    လက်ထက် သာသနာသက္ကရာဇ် ၂၄၅၆ခု၊ ကောဇာ သက္ကရာဇ် ၁၂၇၄ခုနှစ်တွင်မှသာ ပထမတောင်ပေါ်ကျောင်းဆရာတော်
+                    ဦးအာလောက၏ စီမံဦးဆောင်မှု ဖြင့် ညောင်ဦးမြို့ဈေးရပ် ဦးမှုံ၊ ဒေါ်သာယာတို့မိသားစုမှ စေတီတော်ပြုပြင်ခြင်း၊ 
+                    ကျောင်းကန်ဇရပ်နှင့် သိမ်များ ပြုပြင်လှူဒါန်းခြင်းတို့ကို တွေ့ရပါသည်။ တုရင်တောင်စေတီတော်ကြီး၏ 
+                    ထီးတော်ကို အသစ်ပြန်လည်ကပ်လှူနိုင်ရန်အတွက် ပထမတောင်ပေါ် ဆရာတော်ဦးအာလောကသည် ထီးတော်သစ်ပြုလုပ်တင်လှူရန် ချောက်ကန် ရွာဦးကျောင်းဆရာတော် ဦးစန္ဒိမာအား တာဝန်ပေးအပ်ခဲ့ပြီး ဦးစန္ဒိမာက ဦးဆောင်၍  ပန်းချီ၊ ပန်းပု၊ ပန်းဘဲ၊ ပန်းတိမ် စသောပညာများကို တတ်မြောက်သော ချောက်ကန်ရွာသူ၊ ရွာသားတို့ကို နှိုးဆော်တိုက်တွန်းပြီး          ဘုံ(၁၅)ဆင့်ရှိသော ထီးတော်ကို  ၁၂၆၃ ခုနှစ်၌ တင်လှူပူဇော်နိုင်ခဲ့ပါသည်။ ယခုလက်ရှိ တုရင်တောင် စွယ်တော်မြတ်စေတီတော်ကြီး၏ ထီးတော်ကို ၁၉၉၁ ခုနှစ်၊ ဖေဖော်ဝါရီလ (၂၇) ရက်၊၁၃၅၂ ခု၊ တပေါင်းလပြည့်နေ့တွင် ကုသိုလ်ရှင်ဒုတိယဗိုလ်ချုပ်ကြီး ထွန်းကြည်နှင့်ဇနီးဒေါ်နီနီတို့မှ ကုသိုလ်ပြု တင်လှူထားပါသည်။</span>
+                </p>
+           <br><br><br><br><br><br><br>
+                <div class="features-grid">
+                    <div class="video-container">           
+                       <div class="video-container">           
+                        <iframe width="400" height="250" 
+                                src="https://www.youtube.com/embed/ZJvorJfMYoo" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <p style="font-size: 12px; text-align: center;">တုရင်တောင်စယ်တော်မြတ်စေတီတော်</p>
+                    </div>  
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" 
+                                src="https://www.youtube.com/embed/xj_9YpQYTro" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <p style="font-size: 12px;text-align: center;">တုရင်တောင် ပုဂံခရီး</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" 
+                                src="https://www.youtube.com/embed/D9z_u2VvWB8" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <p style="font-size: 12px;text-align: center;">တုရင်တောင်သမိုင်း</p>
+                    </div>
+                    <div class="video-container">           
+                        <iframe width="400" height="250" 
+                                src="https://www.youtube.com/embed/6oHBi6jDNrw" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <p style="font-size: 12px;text-align: center;">တုရင်တောင်စယ်တော်မြတ်စေတီတော်</p>
+                    </div>  
+                </div>
+
+                <p style="text-align: justify;"><span style="padding-left: 60px;">
+                     မြန်မာနိုင်ငံ၊ မန္တလေးတိုင်းဒေသကြီး၊ ညောင်ဦး-ကျောက်ပန်းတောင်း ကားလမ်းအနောက်ဘက်၊ ပုဂံမြို့၏ 
+                     အရှေ့တောင်ဘက် ခြောက်မိုင်ခန့် အကွာတွင် တည်ရှိသည်။ တုရင်တောင်သည် ပုဂံနယ်နိမိတ်ကို 
+                     သတ်မှတ်ထားသကဲ့သို့ ရှိနေသည်။ အထူးသဖြင့် မြို့ပြနေပြည်တော်ကို ဝန်းရံကာဆီးထားသော သဘာဝမြို့ရိုးလည်း
+                     ဖြစ်သည်။ တုရင်တောင်သည် ပုဂံမြို့ပြ နယ်နိမိတ်အစလည်း ဖြစ်သည်။ တုရင်တောင်ပေါ်မှ ညောင်ဦးတစ်ဖက်
+                     (ဧရာဝတီမြစ်ကမ်း) ၌တည်ရှိသော တန့်ကြည့်တောင်စေတီ စွယ်တော်မြတ်စေတီကို လှမ်း၍ ဖူးမြှော်နိုင်သည်။ 
+                     တုရင်တောင်တွင် စတုတ္ထမြောက် စွယ်တော်မြတ် ကိန်းဝပ်ရာစေတီတော်မြတ် တည်ရှိသည်။ </span>
+                </p>
+                <br><br><br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113178.28386021333!2d94.705325707633!3d21.15518861754031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b5fb51ecfc84af%3A0xdba250b3b517aa82!2zVHV5aW4gVGF1bmcgU3dlbGRhd215YXQg4YCQ4YCv4YCb4YCE4YC64YCQ4YCx4YCs4YCE4YC64YCF4YC94YCa4YC64YCQ4YCx4YCs4YC64YCZ4YC84YCQ4YC64YCF4YCx4YCQ4YCu!5e1!3m2!1sen!2smm!4v1768466414412!5m2!1sen!2smm" width="860" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-------Bagan History-------------->
+
+
+<div id="modal13" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal13')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Bagan History</h2>
+                
+            <section id="history" class="about-us container">
+            
+            <p>
+                မြန်မာ့သမိုင်းတွင် အထွတ်အထိပ်ရောက်ခဲ့သော ပုဂံခေတ် (Bagan Period) သည် မြန်မာနိုင်ငံ၏ ပထမဆုံးသော ဧကရာဇ်နိုင်ငံတော် 
+                (First Myanmar Empire) ဖြစ်ပြီး မြန်မာ့ယဉ်ကျေးမှု၊ စာပေနှင့် ဘာသာသာသနာ၏ အုတ်မြစ်တည်ရာ ဒေသလည်း ဖြစ်ပါသည်။
+            </p>
+            <br><br>
+            <p>၁။ ပုဂံမြို့တည်ခြင်းနှင့် အစောပိုင်းကာလ
+                <ul>
+                    <li>
+                        <a href="#features">ရာဇဝင်ကျမ်းများအရ ပုဂံကို အေဒီ ၁၀၇ တွင် သမုဒ္ဒရာဇ်မင်း က ရွာကြီး (၁၉) ရွာကို စုစည်းကာ စတင်တည်ထောင်ခဲ့သည်ဟု 
+                            ဆိုသော်လည်း၊ သမိုင်းသုတေသနပညာရှင်များကမူ အေဒီ ၉ ရာစု (အေဒီ ၈၄၉) ခန့်တွင် ပျဉ်ပြားမင်း က မြို့ရိုးတည်ခဲ့ခြင်းကို ခိုင်မာသော
+                            အစောပိုင်းကာလအဖြစ် သတ်မှတ်ကြသည်။</a>
+                    </li>      
+                </ul>
+            </p>
+            <p>၂။ ပုဂံရွှေခေတ်နှင့် အနော်ရထာမင်းကြီး
+                <ul>ပုဂံ၏ အတောက်ပဆုံးကာလမှာ အေဒီ ၁၁ ရာစု (အေဒီ ၁၀၄၄) တွင် အနော်ရထာမင်းကြီး နန်းတက်လာချိန်မှ စတင်သည်။
+                    <li>
+                        <a href="#features">နိုင်ငံတော်တည်ဆောက်ခြင်း: အနော်ရထာမင်းကြီးသည် ပြန့်ကျဲနေသော မြို့ပြနိုင်ငံများကို စုစည်းပြီး 
+                            ပထမမြန်မာနိုင်ငံတော်ကြီးကို တည်ထောင်ခဲ့သည်။</a>
+                    </li>
+                    <li>
+                        <a href="#features">သာသနာပြုခြင်း: သထုံပြည်မှ ကြွလာသော ရှင်အရဟံ ၏ လမ်းညွှန်မှုဖြင့် အရည်းကြီးတို့၏ အယူဝါဒကို 
+                            ပယ်ဖျက်ကာ ထေရဝါဒဗုဒ္ဒဘာသာ ကို နိုင်ငံတော်၏ အဓိကကိုးကွယ်မှုအဖြစ် သတ်မှတ်ခဲ့သည်။</a>
+                    </li>
+                    <li>
+                        <a href="#features">စာပေနှင့် ယဉ်ကျေးမှု: ပျူ၊ မွန် နှင့် ဗမာ ယဉ်ကျေးမှုများ ပေါင်းစပ်ကာ မြန်မာစာပေနှင့် အနုပညာရပ်များ စတင်ထွန်းကားလာခဲ့သည်။</a>    
+                    </li>
+                </ul>
+            </p>
+
+            <p>၃။ အထင်ကရ ပုဂံမင်းများနှင့် ဗိသုကာလက်ရာများ
+                <ul>ပုဂံခေတ်တစ်လျှောက်တွင် စေတီပုထိုးပေါင်း သောင်းနှင့်ချီ၍ တည်ထားခဲ့ကြရာ ယနေ့တိုင် နှောင်းလူတို့ အံ့မခန်း လေ့လာနိုင်ဆဲ ဖြစ်သည်။
+                    <li>အနော်ရထာမင်း
+                        <a href="#infoModal">ပထမမြန်မာနိုင်ငံတော် တည်ထောင်ခြင်း၊ ရွှေစည်းခုံဘုရား တည်ခြင်း</a>
+                    </li>
+                    <li>ကျန်စစ်သားမင်း
+                        <a href="#features">မွန်-မြန်မာ ချစ်ကြည်ရေး၊ အာနန္ဒာဘုရား တည်ခြင်း</a>
+                    </li>
+                    <li>အလောင်းစည်သူမင်း
+                        <a href="#features">နိုင်ငံအနှံ့ တိုင်းခန်းလှည့်လည်ခြင်း၊ သဗ္ဗေညုဘုရား တည်ခြင်း</a>    
+                    </li>
+                    <li>နရပတိစည်သူမင်း
+                        <a href="#features">မြန်မာမှု ဗိသုကာ ထွန်းကားခြင်း၊ စူဠာမဏိဘုရား တည်ခြင်း</a>
+                    </li>
+                    <li>ထီးလိုမင်းလိုမင်း
+                        <a href="#features">သာသနာရေး အားပေးခြင်း၊ ထီးလိုမင်းလိုဘုရား တည်ခြင်း</a>    
+                    </li>
+                </ul>
+            </p>
+
+            <p>၄။ ပုဂံခေတ်၏ နိဂုံး
+                <ul>ပုဂံခေတ်သည် အေဒီ ၁၃ ရာစုနှောင်းပိုင်းတွင် တဖြည်းဖြည်း အင်အားချည့်နဲ့လာခဲ့သည်။
+                    <li>
+                        <a href="#features">အတွင်းရေး: ဘုရားဝတ္တကမြေများ များပြားလာသဖြင့် နိုင်ငံတော်က ရရှိသော အခွန်အတုတ် လျော့နည်းလာပြီး စီးပွားရေး ထိခိုက်လာခြင်း။</a>
+                        <a href="#features">ပြင်ပရန်: အေဒီ ၁၂၈၇ တွင် မွန်ဂို (တရုတ်ပြည်မှ ကူဗလိုင်ခန်၏ တပ်များ) ကျူးကျော်ဝင်ရောက်လာခြင်း။</a>
+                        <a href="#features">အုပ်ချုပ်မှုပြိုကွဲခြင်း: နရသီဟပတေ့မင်း (တရုတ်ပြေးမင်း) လက်ထက်တွင် ဗဟိုအစိုးရ အာဏာစက် လျော့နည်းသွားပြီး ပုဂံခေတ် 
+                            နိဂုံးချုပ်ကာ မြန်မာ့သမိုင်းတွင် ပင်းယ၊ စစ်ကိုင်း၊ အင်းဝ စသည့် ခေတ်သစ်များ ပေါ်ထွန်းလာခဲ့သည်။</a>
+                    </li>      
+                </ul>
+            </p>
+            <p>၅။ ယနေ့ခေတ်ပုဂံ
+                <ul>ယနေ့ခေတ်တွင် ပုဂံသည် မြန်မာနိုင်ငံ၏ အဓိက ဂုဏ်ဆောင် ရှေးဟောင်းယဉ်ကျေးမှုဇုန် ဖြစ်သည်။
+                    <li>
+                        <a href="#features">ကမ္ဘာ့အမွေအနှစ်: ၂၀၁၉ ခုနှစ်တွင် ယူနက်စကို (UNESCO) မှ ကမ္ဘာ့အမွေအနှစ်နေရာအဖြစ် တရားဝင် အသိအမှတ်ပြုခဲ့သည်။</a>
+                        <a href="#features">ထိန်းသိမ်းမှု: စေတီပုထိုးပေါင်း ၃,၀၀၀ ကျော်ကို ယနေ့တိုင် လေ့လာဖူးမြော်နိုင်ပြီး မြန်မာ့ဗိသုကာပညာ၏ အထောက်အထားများအဖြစ် တည်ရှိနေဆဲ ဖြစ်သည်။</a>
+                        <a href="#features">မှတ်ချက်: ပုဂံသမိုင်းသည် မြန်မာတို့၏ ဇာတိသွေး၊ ဇာတိမာန်ကို ဖော်ဆောင်ရုံသာမက အရှေ့တောင်အာရှ၏ အကြီးကျယ်ဆုံးသော ဗုဒ္ဓဘာသာ ယဉ်ကျေးမှုအချက်အချာတစ်ခုလည်း ဖြစ်ခဲ့ပါသည်။</a>
+                    </li>      
+                </ul>
+            </p>
+        </section>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+ 
+<!-------ပုံကြီးကြည့်ရန်------------>
+
+
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Ancient Wonders of the Timeless Temples in Bagan</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint1.jpg" alt="Detail Image" >
+        </div>
+    </div>
+</div>
+
+<div id="modal8" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Ancient Wonders of the Timeless Temples in Bagan</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint2.jpg" alt="Detail Image" >
+        </div>
+    </div>
+</div>
+
+<div id="modal9" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal9')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Ancient temple in Bagan after sunset </h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint3.jpg" alt="Detail Image" >
+        </div>
+    </div>
+</div>
+
+<div id="modal10" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal10')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Bagan Cultural Heritage Area</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint4.jpg" alt="Detail Image" >
+        </div>
+    </div>
+</div>
+
+<div id="modal11" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal11')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Bagan World Cultural Heritage</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint5.jpg" alt="Detail Image" >
+        </div>
+    </div>
+</div>
+
+<div id="modal12" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal12')">&times;</span>
+        <div class="modal-body">
+            <h2 style="text-align: center;">Ancient buildings in Bagan</h2>
+                <img src="https://raw.githubusercontent.com/KyawaungMoe/pagoda/refs/heads/main/Viewpoint6.jpg" alt="Detail Image" >
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    // Modal ဖွင့်ရန် function (ID ကို parameter အနေနဲ့ လက်ခံမယ်)
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+    }
+
+    // Modal ပိတ်ရန် function
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    // Modal အပြင်ဘက်ကို နှိပ်ရင် ပိတ်သွားစေရန်
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+
+
+   
+// ပုံကြီးချဲ့ရန်
+    function viewImage(btn) {
+    const viewer = document.getElementById("imageViewer");
+    const fullImg = document.getElementById("fullSizeImg");
+    
+    // ခလုတ်နဲ့ တစ်တွဲတည်းရှိတဲ့ img ရဲ့ src ကို ယူခြင်း
+    const parent = btn.closest('.feature-item'); 
+    const imgSrc = parent.querySelector('img').src;
+    
+    fullImg.src = imgSrc;
+    viewer.style.display = "block"; // Viewer ကို ဖော်ပြမယ်
+    document.body.style.overflow = "hidden"; // နောက်ကစာမျက်နှာ scroll မဖြစ်အောင်
+    }
+
+    // ပိတ်ရန် Function
+    function closeImageViewer() {
+        document.getElementById("imageViewer").style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+
+    
+</script>
+
+   
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Bagan Team-2. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f">KyawaungMoe</i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter">KeinMinAg</i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram">HtatWaiSu</i></a>
+        </div>
+        </div>
+</footer>
+
+
+
+<div id="imageViewer" onclick="closeImageViewer()">
+    <span class="close-btn" onclick="closeImageViewer()">&times;</span>
+    <div class="viewer-wrapper">
+        <img id="fullSizeImg" src="">
+    </div>
+</div>
+
+</body>
+</html>
